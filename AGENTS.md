@@ -58,7 +58,11 @@ The repository-local `.codex/config.toml` is an example/reference config for Cod
 it is auto-loaded. For the observed Codex CLI 0.118.0 behavior, active config is loaded from
 `~/.codex/config.toml`, with command-line overrides such as `-m`, `-s`, `-a`, and `-c`.
 
-If no better project-specific command is documented, use:
+If no better project-specific command is documented, build with the repository scripts:
+- PowerShell: `.\scripts\build.ps1`
+- Bash/Linux/macOS/Git Bash: `./scripts/build.sh`
+
+If the scripts are unavailable or unsuitable, use the direct fallback:
 - `latexmk -lualatex -outdir=build -interaction=nonstopmode -halt-on-error main.tex`
 - `git diff --stat`
 - `git status --short`
