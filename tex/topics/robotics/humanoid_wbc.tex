@@ -1,0 +1,29 @@
+\begin{topic}[id=humanoid_wbc,
+             difficulty={Anspruchsvoll},
+             type={Vergleich von Regelungsarchitekturen und Systemanalyse},
+             prerequisites={Grundlagen der Robotik, Regelungstechnik, Lineare Algebra, Zustandsmodelle},
+             practice={gut möglich},
+             owner={Dozententeam},
+             updated={2026-04-10},
+             tags={ Whole-Body Control, Humanoide Robotik, Inversdynamik, Aufgabenhierarchie, Kontaktmodellierung, Schwerpunktregelung, Optimierungsbasierte Regelung, Lernbasierte Regelung }]{Ganzkörpersteuerung humanoider Roboter: modellbasierte und lernbasierte Ansätze}
+
+\TopicDescription{Ganzkörpersteuerung humanoider Roboter beschreibt Verfahren, die viele Freiheitsgrade, Kontaktbedingungen und Teilaufgaben eines Roboters in einer gemeinsamen Regelungs- oder Optimierungsstruktur koordinieren. Im Seminar soll untersucht werden, wie modellbasierte Whole-Body-Control-Ansätze mit Aufgabenhierarchien, Inversdynamik, Schwerpunktregelung und Kontaktmodellierung arbeiten und wie sich diese Verfahren von neueren lernbasierten Ansätzen unterscheiden. Ein zentraler Aspekt ist die gleichzeitige Erfüllung konkurrierender Ziele, etwa Gleichgewicht, Greifaufgabe, Fußkontakt, Gelenkgrenzen und Kollisionsvermeidung. Das Thema ist seminarfähig, weil es einen klaren technischen Kern besitzt und aktuelle humanoide Systeme stark von der Fähigkeit abhängen, Lokomotion und Manipulation als gekoppelte Ganzkörperaufgabe zu behandeln. Neben klassischen prioritätsbasierten und optimierungsbasierten Architekturen sollen auch aktuelle Trends betrachtet werden, etwa datengestützte Controller, vortrainierte Bewegungsmodelle und hybride Verfahren aus Planung, Regelung und Lernen. Ziel ist nicht die vollständige mathematische Herleitung aller Verfahren, sondern eine strukturierte Einordnung der Entwurfsprinzipien, Echtzeitanforderungen, Schnittstellen zur Wahrnehmung sowie der typischen Trade-offs zwischen Stabilität, Rechenaufwand, Generalisierbarkeit und Robustheit gegenüber Störungen. Zusätzlich eignet sich das Thema für einen Vergleich offener Software-Stacks, mit denen Aufgabenhierarchien, Nebenbedingungen und inverse Dynamik praktisch umgesetzt und an Simulations- oder Forschungsplattformen getestet werden.}
+
+\TopicLeitfragen{%
+\item Welche Aufgabenhierarchien nutzen klassische Whole-Body-Control-Verfahren?
+\item Wie unterscheiden sich modellbasierte und lernbasierte Ansätze bei Stabilität, Rechenaufwand und Generalisierung?
+\item Welche Rolle spielen Kontaktmodellierung, Schwerpunktregelung und Inversdynamik in Echtzeit?
+}
+
+\TopicScope{%
+\item Keine vollständige Herleitung nichtlinearer Roboterdynamik
+\item Kein Überblick über Humanoidhardware, Aktuatorik oder Mechanikdesign
+\item Keine allgemeine Einführung in Reinforcement Learning ohne Bezug zur Ganzkörpersteuerung
+}
+
+\TopicPractice{Vergleiche in einer kleinen Literatur- oder Softwareanalyse zwei offene WBC-Frameworks hinsichtlich Aufgabenhierarchie, Nebenbedingungen und Echtzeitfähigkeit. Alternativ kann eine einfache priorisierte Aufgabenstruktur in Simulation oder Pseudocode dargestellt werden.}
+
+\TopicKeywords{Whole-Body Control, Humanoide Robotik, Inversdynamik, Aufgabenhierarchie, Kontaktmodellierung, Schwerpunktregelung, Optimierungsbasierte Regelung, Lernbasierte Regelung}
+
+\nocite{robotik_humanoid_wbc_gu2025,robotik_humanoid_wbc_sentis2006,robotik_humanoid_wbc_moro2017,robotik_humanoid_wbc_sot2026}
+\end{topic}

@@ -1,0 +1,29 @@
+\begin{topic}[id=isaac_sim_lab_humanoid,
+             difficulty={Mittel},
+             type={Überblick + Systemvergleich},
+             prerequisites={Grundlagen der Robotik, Python, Basiswissen zu maschinellem Lernen},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-10},
+             tags={ humanoide Robotik, Simulation, Isaac Sim, Isaac Lab, Reinforcement Learning, Imitation Learning, Sim-to-Real, GPU-Physik }]{Simulationsplattformen für humanoides Lernen mit Isaac Sim und Isaac Lab}
+
+\TopicDescription{Das Thema untersucht, wie NVIDIA Isaac Sim und Isaac Lab als gekoppelte Werkzeugkette für das Lernen humanoider Roboter eingesetzt werden. Im Zentrum steht nicht die Bedienung einzelner Tools, sondern die technische Rolle der Simulation im Trainingsprozess: Modellierung von Kinematik und Kontakt, Sensorik, Policy-Training, Datengewinnung und Vorbereitung eines späteren Sim-to-Real-Transfers. Isaac Sim stellt dafür die physikbasierte Simulationsumgebung mit Robotermodellen, Sensoren und Szenen bereit, während Isaac Lab eine darauf aufbauende, modulare Forschungsumgebung für Reinforcement Learning, Imitation Learning und verwandte Workflows liefert. Für humanoide Systeme ist diese Trennung besonders relevant, weil hohe Freiheitsgrade, instabile Dynamik und teure Realhardware umfangreiche Vorversuche in Simulation erzwingen. Zusätzlich lassen sich bereits vorgefertigte Umgebungen und Demos für Lokomotion, Manipulation und Teleoperation untersuchen, was das Thema für ein Seminar praktisch anschlussfähig macht. Seminarisch interessant ist das Thema, weil sich konkrete technische Leitfragen formulieren lassen: Welche Eigenschaften einer Simulationsplattform sind für humanoide Lokomotion und Manipulation entscheidend? Welche Aufgaben übernimmt das Lernframework zusätzlich zur Simulatorbasis? Und wo liegen trotz moderner GPU-Simulation weiterhin Grenzen, etwa bei Kontaktmodellierung, Aktuatorabbildung oder Generalisierung auf reale Systeme? Das Thema eignet sich daher als strukturierter Überblick mit Vergleichs- und Einordnungsanteil.}
+
+\TopicLeitfragen{%
+\item Welche Aufgaben übernimmt Isaac Sim, welche Isaac Lab im humanoiden Lernworkflow?
+\item Welche Simulationsmerkmale sind für humanoide Lokomotion und Manipulation entscheidend?
+\item Wo liegen zentrale Grenzen beim Übergang von Simulation zu realen Systemen?
+}
+
+\TopicScope{%
+\item Keine vollständige Einführung in Reinforcement Learning.
+\item Kein Marktüberblick über alle Robotiksimulatoren.
+\item Keine vollständige Implementierung einer Trainingspipeline auf Realhardware.
+}
+
+\TopicPractice{Eine kleine Praxisvertiefung kann eine strukturierte Demo-Analyse eines vorhandenen humanoiden Isaac-Lab-Beispiels sein. Dabei werden Modell, Sensorik, Trainingsworkflow und mögliche Sim-to-Real-Hürden systematisch dokumentiert.}
+
+\TopicKeywords{humanoide Robotik, Simulation, Isaac Sim, Isaac Lab, Reinforcement Learning, Imitation Learning, Sim-to-Real, GPU-Physik}
+
+\nocite{robotik_isaacsim_nvidia2026,robotik_isaacsim_robotsim2026,robotik_isaaclab_mittal2025,robotik_isaaclab_docs2026,robotik_isaaclab_envs2026}
+\end{topic}
