@@ -86,6 +86,8 @@ At the end of a task, report:
   - **Focused** (one logical change),
   - **Documented** (clear message + brief rationale in body if non-obvious).
 - When a change touches public behavior, settings, or architecture, update docs **in the same commit**.
+- Push meaningful, review-ready commits automatically to the current branch's remote unless the user asks not to,
+  no remote is configured, or pushing would require rewriting remote history.
 
 **Commit message format**
 - `area: short summary`
