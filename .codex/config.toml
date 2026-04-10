@@ -1,3 +1,8 @@
+# Repository-provided example config for Codex CLI.
+# Observed with codex-cli 0.118.0: Codex auto-loads ~/.codex/config.toml,
+# not this repository-local file. Copy or merge values into ~/.codex/config.toml
+# or pass equivalent CLI flags to activate them.
+
 model = "gpt-5.4"
 model_reasoning_effort = "medium"
 model_verbosity = "medium"

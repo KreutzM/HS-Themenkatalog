@@ -9,6 +9,7 @@ Die Projektstruktur wurde so umgestellt, dass Themen **einfach ergänzt**, **sem
 - Alternativ: **pdfLaTeX**
 - Bibliographie: **biber**
 - Reihenfolge: `LaTeX -> biber -> LaTeX -> LaTeX`
+- Voraussetzung: `latexmk`, `lualatex` und `biber` sind lokal installiert und im `PATH`.
 
 Direkt ausführbarer Standardbuild:
 
@@ -21,6 +22,23 @@ Falls LuaLaTeX lokal nicht verfügbar ist, kann alternativ pdfLaTeX verwendet we
 ```bash
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
+
+## Codex CLI
+
+Die Datei `.codex/config.toml` ist eine Repository-Vorlage für sinnvolle Codex-CLI-Einstellungen.
+In Codex CLI 0.118.0 wurde lokal beobachtet: automatisch geladen wird `~/.codex/config.toml`, nicht
+die repository-lokale Datei `.codex/config.toml`.
+
+Um die Vorlage zu verwenden, die benötigten Werte aus `.codex/config.toml` in die eigene
+`~/.codex/config.toml` übernehmen. Alternativ können die wichtigsten Einstellungen beim Start
+explizit gesetzt werden:
+
+```bash
+codex -C . -m gpt-5.4 -s workspace-write -a untrusted
+```
+
+Profile aus `.codex/config.toml` sind erst nutzbar, nachdem sie in `~/.codex/config.toml`
+übernommen wurden.
 
 ## Schnellstart
 

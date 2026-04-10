@@ -54,9 +54,12 @@ Before making changes, read these files in this order:
 ## Verification
 
 Prefer the build/test commands documented in `README.md`.
+The repository-local `.codex/config.toml` is an example/reference config for Codex CLI; do not assume
+it is auto-loaded. For the observed Codex CLI 0.118.0 behavior, active config is loaded from
+`~/.codex/config.toml`, with command-line overrides such as `-m`, `-s`, `-a`, and `-c`.
 
 If no better project-specific command is documented, use:
-- `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`
+- `latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex`
 - `git diff --stat`
 - `git status --short`
 

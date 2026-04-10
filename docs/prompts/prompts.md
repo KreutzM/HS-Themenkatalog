@@ -5,6 +5,10 @@ Read AGENTS.md, README.md, and the relevant files in docs/ first.
 
 Work from the repository root.
 
+Codex CLI setup:
+- Treat `.codex/config.toml` as a repository-provided example.
+- If you want those defaults, merge the relevant values into `~/.codex/config.toml` first, or start Codex with explicit flags such as `codex -C . -m gpt-5.4 -s workspace-write -a untrusted`.
+
 Task:
 [klare, konkrete Aufgabe]
 
@@ -16,8 +20,7 @@ Constraints:
 - keep the committed default on student view unless explicitly asked otherwise
 
 Verification:
-- run the documented build command
-- if none is documented, use latexmk on main.tex
+- run the documented build command: `latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex`
 - report changed files and verification result
 ```
 
