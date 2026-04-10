@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{iftex}
+\usepackage{amssymb}
+\ifLuaTeX
+  \providecommand{\DeclareUnicodeCharacter}[2]{}
+\fi
+\DeclareUnicodeCharacter{202F}{\,}% NARROW NO-BREAK SPACE (z. B. in „z. B.“)
+\DeclareUnicodeCharacter{2011}{-}% NON-BREAKING HYPHEN (geschützter Bindestrich)
+
+\ifLuaTeX
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \usepackage[ngerman]{babel}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[ngerman]{babel}
+\fi
+\usepackage{csquotes}
+\usepackage{geometry}\geometry{margin=2.5cm}
+\usepackage[final]{microtype}
+\emergencystretch=1.5em
+\usepackage{xurl}\urlstyle{same}
+\usepackage[hidelinks,bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+\usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage[backend=biber,style=ieee,sorting=nyt,maxnames=6]{biblatex}
+\usepackage{newunicodechar}
+
+\addbibresource{bib/seminar.bib}
+
+\input{tex/catalog_settings.tex}
+
+\hypersetup{
+  pdftitle={CS1025 Hauptseminar -- Themenkatalog (\CatalogSemester)},
+  pdfauthor={Ingenieur-Informatik \textperiodcentered{} THM},
+  pdfsubject={Modular gepflegter Seminarkatalog mit Registry- und Statuslogik},
+  pdfkeywords={Themenkatalog, Seminar, Informatik, Ingenieur-Informatik, THM, \CatalogSemester}
+}
+
+\input{tex/macros.tex}
+
+\title{CS1025 Hauptseminar -- Themenkatalog (\CatalogSemester)}
+\author{Ingenieur-Informatik \textperiodcentered{} THM}
+\date{Stand: \today}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Hinweis zur Nutzung.}
+Dieser Katalog zeigt in der Studierendenansicht nur aktuell freigegebene Themen.
+Die interne Pflege erfolgt über statusgesteuerte Registry-Dateien, sodass Themen semesterweise
+schnell aktiviert, ausgeblendet oder als bereits verwendet markiert werden können.
+Bei inhaltlichen Rückfragen oder Errata bitte an
+\href{mailto:\CatalogContactEmail}{\CatalogContactEmail} wenden.
+
+\vspace{0.75\baselineskip}
+\noindent\textbf{Katalogversion.}
+Fassung: \texttt{\CatalogVersion} (\CatalogSemester)
+
+\input{tex/00_module_readme.tex}
+
+\tableofcontents
+\clearpage
+
+\input{tex/01_embedded_intelligence.tex}
+\input{tex/02_secure_resilient.tex}
+\input{tex/03_connected_iot.tex}
+\input{tex/04_robotics_autonomy.tex}
+\input{tex/05_future_sustainable.tex}
+\input{tex/99_open_topics.tex}
+
+\end{document}

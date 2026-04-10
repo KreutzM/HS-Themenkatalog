@@ -1,0 +1,24 @@
+\begin{topic}[id=pytorch_embedded,
+             difficulty={Einstieg},
+             type={Überblick + Einordnung},
+             prerequisites={Grundlagen Python; Basisverständnis maschinelles Lernen},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ PyTorch, Datasets, Training, TorchScript, ExecuTorch, ONNX, Quantisierung }]{PyTorch – kompakte Einführung mit Embedded-Bezug}
+
+\TopicDescription{PyTorch eignet sich hervorragend zum schnellen Prototyping. Du lernst Datasets/Dataloaders, `nn.Module`, Logging/Checkpointing und reproduzierbares Training. Dann werden Exportpfade (TorchScript/ONNX) und einfache Optimierungen betrachtet. Der Schwerpunkt liegt auf realistischen Abwägungen: Wie viel Genauigkeit kostet eine Optimierung und was bringt sie an Latenz/Größe? Mit diesem Rüstzeug kannst du Varianten fair vergleichen und geeignete Modelle für Edge-Szenarien vorbereiten.}
+
+\TopicLeitfragen{\item Welche Minimal-Pipelines sind für kleine Projekte am effizientesten?
+\item Wann lohnt sich TorchScript/ONNX/ExecuTorch?
+\item Wie misst und dokumentiert man die Effekte einfacher Optimierungen?
+}
+\TopicScope{\item Kein tiefes Training großer Modelle.
+\item Kein vollständiger Hardware-Portierungsleitfaden.
+}
+\TopicPractice{Zwei Modellvarianten exportieren (TorchScript/ONNX) und Inferenzzeiten auf CPU vergleichen.}
+
+\TopicKeywords{PyTorch, Datasets, Training, TorchScript, ExecuTorch, ONNX, Quantisierung}
+
+\nocite{pytorchTutorials,execuTorchDocs}
+\end{topic}

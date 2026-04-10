@@ -1,0 +1,24 @@
+\begin{topic}[id=embedded_vision_ondevice,
+             difficulty={Mittel},
+             type={Systemanalyse + Benchmarking},
+             prerequisites={Grundlagen eingebetteter Systeme; Basiswissen Bildverarbeitung oder Python/C++},
+             practice={gut möglich},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ Embedded Vision, OpenCV, Jetson, Pipeline, FPS, Latenz, Preprocessing, Optimierung }]{Embedded Vision on-device (z.B. Jetson/MCU)}
+
+\TopicDescription{On-device-Vision reduziert Latenz und schützt Daten, erfordert aber sorgsame Pipeline-Gestaltung: Kamera-I/O, Farbraum-Konvertierung, Resizing und Pufferverwaltung sind oft die wahren Bottlenecks. Das Thema zeigt robuste Minimal-Pipelines auf Edge-Geräten und kombiniert klassische Verfahren mit leichten Netzen. Du lernst Metriken (FPS, End-to-End-Latenz, Auslastung) sinnvoll zu nutzen und einfache Optimierungen (ROI-Cropping, Quantisierung, Preprocessing am Sensor) systematisch zu bewerten.}
+
+\TopicLeitfragen{\item Wo entstehen in Edge-Vision-Pipelines die größten Latenzen?
+\item Welche einfachen Optimierungen bringen messbaren Nutzen?
+\item Wann lohnt sich ein Hardware-Beschleuniger?
+}
+\TopicScope{\item Kein Training großer Netze.
+\item Keine umfangreiche Kameratreiber-Entwicklung.
+}
+\TopicPractice{Mini-Pipeline „Kamera → Preprocessing → leichte Inferenz/Heuristik → Ausgabe“ mit zwei Optimierungsvarianten.}
+
+\TopicKeywords{Embedded Vision, OpenCV, Jetson, Pipeline, FPS, Latenz, Preprocessing, Optimierung}
+
+\nocite{opencvDocs,nvidiaJetsonGuide}
+\end{topic}

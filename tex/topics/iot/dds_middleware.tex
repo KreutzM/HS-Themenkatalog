@@ -1,0 +1,24 @@
+\begin{topic}[id=dds_middleware,
+             difficulty={Anspruchsvoll},
+             type={Middleware-Analyse},
+             prerequisites={Grundlagen verteilte Systeme; Basiswissen Echtzeit- oder Kommunikationssysteme},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ DDS, QoS, RTPS, Liveliness, Reliability, Deadline, Discovery }]{DDS – datenorientierte Middleware (QoS)}
+
+\TopicDescription{Data Distribution Service (DDS) ist eine echtzeitfähige, datenorientierte Middleware für verteilte Systeme – stark in Robotik, Automotive, Defense. Statt Nachrichtenlogik steht die Konsistenz von Daten-Topics im Fokus; feingranulare QoS-Regeln steuern Zuverlässigkeit, Latenzbudgets, History, Deadline, Liveliness u. a. Du lernst, wie Discovery arbeitet, wie QoS-Mismatches entstehen und wie DDS sich zu ROS 2 und OPC UA verhält. Ergebnis ist ein Werkzeugkasten, um DDS sinnvoll einzuschätzen und QoS-Profile bewusst zu wählen – nicht „default und hoffen“.}
+
+\TopicLeitfragen{\item Welche QoS-Profile sind für Sensor- vs. Steuerdaten sinnvoll?
+\item Wie debuggt man Discovery- und QoS-Probleme?
+\item Wo liegen DDS-Stärken vs. MQTT/OPC UA?
+}
+\TopicScope{\item Kein DDS-Vendorvergleich/Benchmark.
+\item Keine Custom-Transport-Plugins.
+}
+\TopicPractice{Optionale Praxisidee: Mini-Szenario mit zwei QoS-Profilen und messbarem Effekt (Latenz/Drop).}
+
+\TopicKeywords{DDS, QoS, RTPS, Liveliness, Reliability, Deadline, Discovery}
+
+\nocite{ddsSpec,ros2Design}
+\end{topic}

@@ -1,0 +1,24 @@
+\begin{topic}[id=opcua,
+             difficulty={Mittel},
+             type={Protokoll + Systemanalyse},
+             prerequisites={Grundlagen industrieller Kommunikation; Basiswissen Client-Server-Systeme},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ OPC UA, Informationsmodell, PubSub, Security, Zertifikate, Industrie 4.0 }]{OPC UA – Konzepte \& Praxis}
+
+\TopicDescription{OPC UA ist die universelle Schicht für semantisch reiches Datenmodellieren und sichere Kommunikation in industriellen Umgebungen. Anders als reine Transportprotokolle beschreibt OPC UA Knoten, Typen und Beziehungen – Maschinen werden zu Informationsmodellen. Du lernst den Unterschied zwischen Client/Server und PubSub, Zertifikats-/Trust-Management, Benutzerrechte und die Integration in bestehende Automatisierung. Wir besprechen, wie man Modelle sinnvoll schneidet (nicht „alles modellieren“) und wie sich UA mit Feldbussen, MQTT oder REST kombiniert. Ziel ist ein praxisnahes Verständnis, um UA-Projekte realistisch zu planen und Stolpersteine (Zertifikatschaos, Latenzen, Versionsmix) zu vermeiden.}
+
+\TopicLeitfragen{\item Wann Client/Server, wann PubSub – und warum?
+\item Wie gestalte ich ein Informationsmodell pragmatisch und wartbar?
+\item Wie organisiere ich Zertifikate/Trust in größeren Installationen?
+}
+\TopicScope{\item Keine vollständige Modellierungs-Spezifikation.
+\item Kein Vendor-Vergleich.
+}
+\TopicPractice{Optionale Praxisidee: Kleines UA-Informationsmodell + Client-Zugriff; optional PubSub-Demo.}
+
+\TopicKeywords{OPC UA, Informationsmodell, PubSub, Security, Zertifikate, Industrie 4.0}
+
+\nocite{opcuaSpec,opcfoundationGuide}
+\end{topic}

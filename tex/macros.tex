@@ -1,0 +1,103 @@
+\usepackage{xparse}
+\usepackage{pgfkeys}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+
+\pgfkeys{/topic/.is family, /topic,
+  id/.initial = ,
+  difficulty/.initial = ,
+  type/.initial = ,
+  prerequisites/.initial = ,
+  practice/.initial = ,
+  owner/.initial = ,
+  updated/.initial = ,
+  tags/.initial = ,
+}
+
+\newcommand{\topicset}[1]{\pgfkeys{/topic,#1}}
+\newcommand{\topicgetval}[2]{\pgfkeysgetvalue{/topic/#1}{#2}\ifstrempty{#2}{\def#2{--}}{}}
+
+\newif\ifTopicDesc \newif\ifTopicKW \newif\ifTopicQ \newif\ifTopicScope \newif\ifTopicPractice
+\newcommand{\CurrentTopicStatus}{active}
+\newcommand{\SetCurrentTopicStatus}[1]{\gdef\CurrentTopicStatus{#1}}
+
+\newcommand{\TopicDescription}[1]{\TopicDesctrue\paragraph{Beschreibung}#1}
+\newcommand{\TopicKeywords}[1]{\TopicKWtrue\paragraph{Schlagwörter}#1}
+\newcommand{\TopicLeitfragen}[1]{\TopicQtrue\paragraph{Leitfragen}\begin{itemize}#1\end{itemize}}
+\newcommand{\TopicScope}[1]{\TopicScopetrue\paragraph{Abgrenzung (nicht enthalten)}\begin{itemize}#1\end{itemize}}
+\newcommand{\TopicPractice}[1]{\TopicPracticetrue\paragraph{Optionale Praxisidee}#1}
+
+\newcommand{\TopicStatusLabel}{%
+  \ifTeacherView
+    \ifstrequal{\CurrentTopicStatus}{active}{\textcolor{gray}{Status: aktiv}}{%
+      \textcolor{red!70!black}{Status: \CurrentTopicStatus}%
+    }%
+  \fi
+}
+
+\newcommand{\TopicMeta}{%
+  \begingroup
+  \def\Tdifficulty{}\def\Ttype{}\def\Tprereq{}\def\Tpractice{}\def\Towner{}\def\Tupdated{}\def\Tid{}
+  \topicgetval{difficulty}{\Tdifficulty}
+  \topicgetval{type}{\Ttype}
+  \topicgetval{prerequisites}{\Tprereq}
+  \topicgetval{practice}{\Tpractice}
+  \topicgetval{owner}{\Towner}
+  \topicgetval{updated}{\Tupdated}
+  \topicgetval{id}{\Tid}
+  \noindent\textit{Niveau: \Tdifficulty \quad Typ: \Ttype \quad Praxisanteil: \Tpractice \quad Betreuer: \Towner \quad Aktualisiert: \Tupdated}
+  \ifTeacherView\quad \TopicStatusLabel\fi
+  \par
+  \smallskip
+  \noindent\textbf{Empfohlene Vorkenntnisse:} \Tprereq\par\medskip
+  \endgroup
+}
+
+\newcommand{\TopicWarnIfMissingMeta}[1]{%
+  \begingroup
+    \def\Ttmp{}\topicgetval{#1}{\Ttmp}%
+    \ifstrequal{\Ttmp}{--}{%
+      \def\Tid{}\topicgetval{id}{\Tid}%
+      \PackageWarning{topic}{Thema (id=\Tid): Metadatum '#1' fehlt!}%
+    }{}%
+  \endgroup
+}
+
+\NewDocumentEnvironment{topic}{ O{} m }{%
+  \topicset{#1}%
+  \TopicDescfalse \TopicKWfalse \TopicQfalse \TopicScopefalse \TopicPracticefalse%
+  \subsection{#2}%
+  \TopicMeta
+  \begin{refsection}%
+}{%
+  \begingroup
+    \def\Tid{}\topicgetval{id}{\Tid}%
+    \ifTopicDesc\else\PackageWarning{topic}{Thema (id=\Tid): 'Beschreibung' fehlt!}\fi
+    \ifTopicQ\else\PackageWarning{topic}{Thema (id=\Tid): 'Leitfragen' fehlen!}\fi
+    \ifTopicScope\else\PackageWarning{topic}{Thema (id=\Tid): 'Abgrenzung' fehlt!}\fi
+    \ifTopicPractice\else\PackageWarning{topic}{Thema (id=\Tid): 'Optionale Praxisidee' fehlt!}\fi
+    \ifTopicKW\else\PackageWarning{topic}{Thema (id=\Tid): 'Schlagwörter' fehlen!}\fi
+    \TopicWarnIfMissingMeta{difficulty}%
+    \TopicWarnIfMissingMeta{type}%
+    \TopicWarnIfMissingMeta{prerequisites}%
+    \TopicWarnIfMissingMeta{practice}%
+  \endgroup
+  \printbibliography[heading=subbibliography,title={Literatur (Auswahl)}]%
+  \end{refsection}%
+  \medskip\hrule\medskip
+}
+
+\newcommand{\TopicEntry}[2]{%
+  \SetCurrentTopicStatus{#1}%
+  \ifstrequal{#1}{active}{%
+    \input{#2}%
+  }{%
+    \ifTeacherView
+      \input{#2}%
+    \fi
+  }%
+  \SetCurrentTopicStatus{active}%
+}
+
+\setlist[itemize]{leftmargin=*,nosep}
+\setlist[enumerate]{leftmargin=*,nosep}

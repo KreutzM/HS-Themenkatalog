@@ -1,0 +1,24 @@
+\begin{topic}[id=mqtt_pubsub,
+             difficulty={Einstieg},
+             type={Protokoll + Praxisbezug},
+             prerequisites={Grundlagen Rechnernetze; einfache Kenntnisse in Python, Node.js oder ähnlichem hilfreich},
+             practice={gut möglich},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ MQTT, Publish/Subscribe, Broker, QoS, Retain, LWT, Security, ACL }]{MQTT – leichtgewichtiges Pub/Sub}
+
+\TopicDescription{MQTT ist de-facto Standard für leichtgewichtige Telemetrie in IoT- und IIoT-Umgebungen. Das Protokoll setzt auf Publish/Subscribe über einen Broker, ist sparsam bei Bandbreite/Energie und funktioniert stabil über wackelige Verbindungen. In diesem Thema lernst du die Kernbausteine (Topics, Wildcards, QoS 0/1/2, Retained Messages, Last Will/Testament) und typische Broker-Funktionen (ACLs, Persistenz, Bridges). Wir betrachten Sicherheitsaspekte (TLS, Client-Zertifikate, AuthN/Z) und typische Fehlkonfigurationen, die in der Praxis zu Datenverlust oder Leaks führen. Außerdem ordnen wir MQTT im Vergleich zu Alternativen (AMQP, CoAP, DDS) ein und diskutieren, wann MQTT die richtige Wahl ist – z.~B. als Telemetrieebene in Edge-Architekturen oder als Integrationsschicht mit Node-RED. Ziel ist ein belastbares Verständnis, mit dem du robuste und sichere MQTT-Deployments planen und bewerten kannst.}
+
+\TopicLeitfragen{\item Welche QoS-Stufe ist für typische Telemetrie ausreichend – und warum?
+\item Wie werden Authentifizierung und Autorisierung (ACL) pragmatisch umgesetzt?
+\item Wann ist MQTT gegenüber CoAP/DDS die bessere Wahl?
+}
+\TopicScope{\item Kein Broker-Tuning im Detail.
+\item Keine High-Availability-Cluster-Setups.
+}
+\TopicPractice{Optionale Praxisidee: Minimal-Stack (Broker + 2 Clients) mit QoS-Vergleich und ACL-Beispiel.}
+
+\TopicKeywords{MQTT, Publish/Subscribe, Broker, QoS, Retain, LWT, Security, ACL}
+
+\nocite{mqttOasisSpec,eclipseMosquitto,hivemqGuides}
+\end{topic}

@@ -1,0 +1,24 @@
+\begin{topic}[id=memfault_remote_debug,
+             difficulty={Mittel},
+             type={Tool- und Prozessanalyse},
+             prerequisites={Grundlagen eingebetteter Systeme; Basiswissen Debugging und Software-Wartung},
+             practice={gut möglich},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ Observability, Crashdump, Core-Dump, Telemetrie, OTA, Datenschutz }]{Remote-Debugging: Memfault}
+
+\TopicDescription{Feldfehler sind teuer und schwer reproduzierbar. Memfault bietet Embedded-Observability: Geräte liefern Crash/Core-Dumps, Heartbeats und Telemetrie, die in der Cloud ausgewertet werden—inklusive OTA-Funktionen. Das Thema beschreibt Architektur und Integrationsschritte (Build/CI, Symbole/Backtraces) und zeigt, wie Ursachen sichtbar werden (Out-of-Memory, Stack-Überlauf, Watchdog). Ebenso wichtig: Datenschutz—welche Daten sind nötig, wie schützt man sie, wie vermeidet man PII? Ergebnis: Ein klares Verständnis, wann Observability den Unterschied macht.}
+
+\TopicLeitfragen{\item Wie integriert man Symbolik/Backtraces sinnvoll in CI/CD?
+\item Welche Telemetrie ist „mindestens nötig“ vs. „nice to have“?
+\item Wie adressiert man Datenschutz/PII praktisch?
+}
+\TopicScope{\item Kein Vendor-Lock-in-Vergleich im Detail.
+\item Keine vollständige OTA-Implementierung.
+}
+\TopicPractice{Simulation eines Crashes und Interpretation des Backtraces in der Plattform.}
+
+\TopicKeywords{Observability, Crashdump, Core-Dump, Telemetrie, OTA, Datenschutz}
+
+\nocite{memfaultDocs,memfaultBlogIntro}
+\end{topic}

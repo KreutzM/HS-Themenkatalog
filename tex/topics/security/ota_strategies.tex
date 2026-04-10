@@ -1,0 +1,24 @@
+\begin{topic}[id=ota_strategies,
+             difficulty={Mittel},
+             type={Architekturvergleich},
+             prerequisites={Grundlagen eingebetteter Systeme; Basiswissen Software-Updates und Security hilfreich},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ OTA, Uptane, SUIT, Signaturen, Rollback, Root of Trust, Policy }]{OTA-Update-Strategien}
+
+\TopicDescription{Sichere Updates sind zentral für vernetzte Geräte. Dieses Thema gibt eine Landkarte: Paketierung/Signierung, sichere Boot-Kette, Geräte-Identität, Versionierung/Kompatibilität und Rollout-Strategien (Canary, Staged, Rollback). Du lernst, was Uptane und IETF-SUIT liefern, wo kleine Geräte an Grenzen stoßen (Flash-Budget, A/B-Slot vs. Single-Image) und wie Telemetrie/Monitoring in den Prozess passt.}
+
+\TopicLeitfragen{\item Welche Kriterien entscheiden zwischen SUIT und Uptane?
+\item Wie wird Rollback sicher und nutzbar umgesetzt?
+\item Welche Telemetrie braucht ein Update-System?
+}
+\TopicScope{\item Keine vollständige End-to-End-Implementierung.
+\item Kein Hardware-Bootloader-Coding.
+}
+\TopicPractice{Sequenzdiagramm für Download, Verifikation und Rollback.}
+
+\TopicKeywords{OTA, Uptane, SUIT, Signaturen, Rollback, Root of Trust, Policy}
+
+\nocite{uptaneSpec,ietfSUIT}
+\end{topic}

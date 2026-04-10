@@ -1,0 +1,25 @@
+\begin{topic}[id=tinyml_tflm,
+             difficulty={Mittel},
+             type={Überblick + Vergleich},
+             prerequisites={Grundlagen C/C++; Basisverständnis Embedded Systems und ML},
+             practice={gut möglich},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ TinyML, TensorFlow Lite Micro, Edge AI, Quantisierung, Inferenz, MCU, Echtzeit, Energie }]{TinyML \& TensorFlow Lite Micro}
+
+\TopicDescription{Künstliche Intelligenz ist längst nicht nur Cloud: Mit TinyML können selbst kleine Mikrocontroller Modelle direkt auf dem Gerät ausführen—ohne Internet und mit minimalem Energiebedarf. Das ist relevant, wenn Entscheidungen lokal, schnell und datenschutzfreundlich fallen müssen (Vibrationen, Geräusche, Gesten). TensorFlow Lite for Microcontrollers (TFLM) stellt dafür eine kompakte Laufzeit bereit und bringt Netze in den Bereich weniger hundert Kilobyte. Die Beschreibung zeigt verständlich, wie der Weg von der Datenerhebung über das Training bis zum optimierten Edge-Artefakt aussieht und welche Trade-offs entstehen: Was kostet Quantisierung an Genauigkeit, was gewinnt man an Latenz und Speicher? Wo setzen Operator-Verfügbarkeit, RAM-Arenas und Speicherlayout Grenzen? Am Ende kannst du einschätzen, wann TinyML technisch und wirtschaftlich sinnvoll ist—und wann hybride Lösungen (Edge + Cloud) die bessere Wahl sind.}
+
+\TopicLeitfragen{\item Welche Netzarchitekturen funktionieren auf MCUs besonders robust (MLP, kleine CNNs, Keyword-Spotting-Modelle)?
+\item Wie beeinflusst int8-Quantisierung Genauigkeit, RAM/Flash und Latenz in TFLM?
+\item Welche Operator-/Hardware-Limitationen bestimmen die Modellwahl?
+}
+\TopicScope{\item Kein Training „on device“.
+\item Kein Deep-Dive in DSP/Assembler-Optimierung.
+\item Kein detaillierter Framework-Vergleich jenseits von TFLM.
+}
+\TopicPractice{Mini-Demo (Keyword-Spotting oder Klopferkennung) mit Messung von Latenz und RAM/Flash.}
+
+\TopicKeywords{TinyML, TensorFlow Lite Micro, Edge AI, Quantisierung, Inferenz, MCU, Echtzeit, Energie}
+
+\nocite{tfliteMicroDocs,wardenTinyMLBook,edgeImpulseDocs}
+\end{topic}

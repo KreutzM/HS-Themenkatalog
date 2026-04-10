@@ -1,0 +1,24 @@
+\begin{topic}[id=sidechannel_attacks,
+             difficulty={Anspruchsvoll},
+             type={Sicherheitsanalyse + Bewertung},
+             prerequisites={Grundlagen Kryptografie und Embedded Systems; Bereitschaft zur Einarbeitung in Mess- und Leckmodelle},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ SCA, DPA, CPA, EM, Timing, Gegenmaßnahmen, TVLA, Messaufbau }]{Seitenkanal-Angriffe auf Embedded-Systeme}
+
+\TopicDescription{Seitenkanalangriffe werten unbeabsichtigte Signale aus—Stromaufnahme, EM-Abstrahlung oder Laufzeiten—und rekonstruieren daraus geheime Zustände. Eingebettete Systeme sind anfällig: wiederkehrende Muster, knappe Ressourcen und lange Lebenszyklen erschweren Härtung. Das Thema ordnet die wichtigsten Angriffsklassen (DPA/CPA, Timing, EM), erläutert Leck- und Auswertungsmodelle sowie typische Messaufbauten. Ebenso wichtig sind Gegenmaßnahmen: Maskierung, Randomisierung, konstante Zeit und physikalische Schutzmaßnahmen. Du erhältst einen nüchternen Blick auf Evaluierung (z.~B. TVLA), Kosten/Nutzen-Abwägungen und Designprinzipien für mehr Resilienz.}
+
+\TopicLeitfragen{\item Welche Leckmodelle und Messgrößen sind praxistauglich?
+\item Welche Gegenmaßnahmen sind wirksam bei vertretbarem Overhead?
+\item Wie liest man TVLA-Ergebnisse richtig?
+}
+\TopicScope{\item Kein HF-Messtechnik-Deep-Dive.
+\item Keine Kryptografie-Theorie im Detail.
+}
+\TopicPractice{Mini-Experiment (real/simuliert) zu DPA/CPA mit kurzer Auswertungsdemonstration.}
+
+\TopicKeywords{SCA, DPA, CPA, EM, Timing, Gegenmaßnahmen, TVLA, Messaufbau}
+
+\nocite{kocherDPA1999,chipwhispererDocs}
+\end{topic}

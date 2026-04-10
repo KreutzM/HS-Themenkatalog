@@ -1,0 +1,24 @@
+\begin{topic}[id=ros2_micro,
+             difficulty={Anspruchsvoll},
+             type={Systemanalyse + Middleware},
+             prerequisites={Grundlagen Robotik oder eingebettete Systeme; Basiswissen Linux und verteilte Systeme hilfreich},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-09},
+             tags={ ROS 2, micro-ROS, DDS, QoS, RT, Executor, Sensorik, Aktorik }]{ROS 2 \& micro-ROS}
+
+\TopicDescription{ROS 2 ist der Standard-Stack für Robotik; micro-ROS bringt ROS-Themen auf Microcontroller. Du lernst die Architektur (Nodes, Topics, Services, Actions), DDS/QoS als Transportbasis und die Besonderheiten echtzeitnaher Ausführung (Executors, RMW). Wir beleuchten, wann micro-ROS sinnvoll ist, wie es sich mit ROS 2 integriert und welche Ressourcenfallen (Speicher, Timing) realistisch auftreten. Ziel ist eine klare Vorstellung, wie man ROS 2-Graphen robust aufsetzt und QoS für Sensorik/Steuerung auswählt.}
+
+\TopicLeitfragen{\item Welche QoS-Profile sind für Sensor- vs. Steuerpfade geeignet?
+\item Wann lohnt micro-ROS statt „voller“ ROS 2?
+\item Wie strukturiert man stabile Launch/Composability?
+}
+\TopicScope{\item Kein Gazebo/Simulations-Deep-Dive.
+\item Keine Treiberentwicklung im Detail.
+}
+\TopicPractice{Optionale Praxisidee: Kleiner ROS 2-Graph mit zwei QoS-Varianten (Latency/Drop vergleichen).}
+
+\TopicKeywords{ROS 2, micro-ROS, DDS, QoS, RT, Executor, Sensorik, Aktorik}
+
+\nocite{ros2Docs,microRosDocs,ros2Design}
+\end{topic}
