@@ -10,6 +10,18 @@ Die Projektstruktur wurde so umgestellt, dass Themen **einfach ergänzt**, **sem
 - Bibliographie: **biber**
 - Reihenfolge: `LaTeX -> biber -> LaTeX -> LaTeX`
 
+Direkt ausführbarer Standardbuild:
+
+```bash
+latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex
+```
+
+Falls LuaLaTeX lokal nicht verfügbar ist, kann alternativ pdfLaTeX verwendet werden:
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+```
+
 ## Schnellstart
 
 ### Studierendenansicht bauen
