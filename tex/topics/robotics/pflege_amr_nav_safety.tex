@@ -1,0 +1,31 @@
+\begin{topic}[id=pflege_amr_nav_safety,
+             difficulty={Mittel},
+             type={Systemanalyse und Architekturvergleich},
+             prerequisites={Grundlagen mobiler Robotik, ROS~2-Grundbegriffe, Sensorik, Regelung, einfache Software-Architekturen},
+             practice={gut möglich},
+             owner={Dozententeam},
+             updated={2026-04-10},
+             tags={ Pflegeheim, Service-Roboter, mobile Robotik, ROS~2, Nav2, Indoor-Navigation, Sicherheit, Assistenzsysteme }]{Autonome Liefer- und Assistenzroboter in Pflegeheimen: Navigation, Sicherheit und Einsatzgrenzen}
+
+\TopicDescription{Autonome Liefer- und Assistenzroboter werden in Pflegeheimen vor allem für wiederkehrende, nicht-pflegerische Transport- und Unterstützungsaufgaben diskutiert, etwa für Medikamenten-, Material- oder Essenslogistik. Für ein seminarfähiges Thema ist dabei nicht die allgemeine „Pflege-Robotik“ entscheidend, sondern die technische Frage, wie ein mobiler Roboter in engen, dynamischen Innenräumen zuverlässig und sicher arbeiten kann. Im Mittelpunkt stehen daher Navigationsfunktionen wie Lokalisierung, Kartenaufbau, Pfadplanung, Hindernisvermeidung und Auftragssteuerung sowie Anforderungen an Mensch-Roboter-Interaktion und funktionale Sicherheit. Als praxisnahe Referenz dienen ROS~2-basierte Systeme mit Nav2, weil sich daran Software-Architektur, Sensorintegration und Verhaltensteuerung gut analysieren lassen. Zusätzlich ist zu betrachten, welche Grenzen sich im Pflegekontext ergeben: wechselnde Umgebungen, schmale Durchgänge, vulnerable Nutzergruppen, Priorisierung menschlicher Sicherheit und robuste Interaktion mit Personal. Das Thema eignet sich gut für das 4. Semester, weil es einen klaren technischen Kern besitzt, sich auf konkrete Systembausteine eingrenzen lässt und belastbare Primärquellen aus Forschung, Standardisierung und Projektdokumentation vorliegen. Eine sinnvolle Ausarbeitung vergleicht daher nicht „alle Pflegeroboter“, sondern fokussiert auf mobile Service-Roboter für Transport- und Assistenzaufgaben in stationären Pflegeumgebungen.}
+
+\TopicLeitfragen{%
+\item Welche Navigationsbausteine sind für Pflegeheime technisch besonders kritisch?
+\item Wie unterstützt ROS~2 mit Nav2 den Aufbau solcher Service-Roboter?
+\item Welche Sicherheitsanforderungen begrenzen autonome Fahrfunktionen im Pflegekontext?
+\item Wo liegen praktische Einsatzgrenzen gegenüber menschlicher Pflegearbeit?
+}
+
+\TopicScope{%
+\item Keine allgemeine Ethikdebatte zu KI in der Pflege
+\item Keine sozialen Begleitroboter ohne autonomen Fahr- und Assistenzfokus
+\item Keine chirurgischen, rehabilitativen oder medizinischen Spezialroboter
+\item Kein vollständiger Marktüberblick über alle Herstellerlösungen
+}
+
+\TopicPractice{In einer Seminarpraxis kann eine ROS~2-/Nav2-Demoumgebung in Simulation analysiert werden, z.~B. mit typischen Pflegeheim-Korridoren, Engstellen und Lieferzielen. Alternativ kann ein Vergleich typischer Navigations- und Sicherheitskonfigurationen anhand veröffentlichter Systemarchitekturen erfolgen.}
+
+\TopicKeywords{Pflegeheim, Service-Roboter, mobile Robotik, ROS~2, Nav2, Indoor-Navigation, Sicherheit, Assistenzsysteme}
+
+\nocite{robotik_pflegeamr_salinas2022,robotik_pflegeamr_nav22026,robotik_pflegeamr_zachariae2024,robotik_pflegeamr_iso2014}
+\end{topic}
