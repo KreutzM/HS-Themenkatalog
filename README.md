@@ -17,6 +17,16 @@ Direkt ausführbarer Standardbuild:
 latexmk -lualatex -outdir=build -interaction=nonstopmode -halt-on-error main.tex
 ```
 
+Alternativ stehen kleine Wrapper-Skripte bereit:
+
+```powershell
+.\scripts\build.ps1
+```
+
+```bash
+./scripts/build.sh
+```
+
 Lokale Build-Artefakte inklusive `main.pdf` landen damit unter `build/` und werden nicht versioniert.
 Overleaf kann weiterhin direkt `main.tex` im Repository-Root bauen.
 
