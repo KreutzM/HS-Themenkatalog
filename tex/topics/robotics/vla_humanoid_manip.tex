@@ -1,0 +1,31 @@
+\begin{topic}[id=vla_humanoid_manip,
+             difficulty={Anspruchsvoll},
+             type={Systemanalyse und Architekturvergleich},
+             prerequisites={Grundlagen in Robotik, maschinellem Lernen, linearen Algebra-Grundlagen und Python},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-10},
+             tags={ VLA, humanoide Robotik, Manipulation, multimodale Modelle, Robot Learning, Generalisierung, Teleoperation, Datensätze }]{Vision-Language-Action-Modelle für humanoide Manipulation}
+
+\TopicDescription{Vision-Language-Action-Modelle (VLA) verbinden visuelle Wahrnehmung, sprachliche Instruktionen und Aktionsausgabe in einer gemeinsamen Modellarchitektur. Für humanoide Manipulation ist das besonders interessant, weil Greifen, Platzieren und einfache bimanuale Aufgaben nicht nur Objekterkennung, sondern auch kontextabhängige Handlungsplanung, Körperstabilität und hochdimensionale Motorik erfordern. Das Thema untersucht, wie VLA-Modelle aus Bildern, Roboterzustand und natürlicher Sprache robuste Manipulationsbefehle ableiten und welche Anpassungen nötig sind, damit Verfahren aus armzentrierter Manipulation auf humanoide Plattformen übertragbar werden. Im Mittelpunkt stehen Architekturentscheidungen wie Aktionsrepräsentation, Kopplung von Vision-Language-Backbone und Regelkreis, Nutzung großer Demonstrationsdatensätze sowie die Bewertung von Generalisierung auf neue Objekte, Formulierungen und Umgebungen. Ebenso wichtig sind Grenzen aktueller Ansätze: Latenz, Sicherheitsanforderungen, Datenbias, schwache Fehlertoleranz bei Kontaktaufgaben, begrenzte Rückmeldung aus Kraft- und Tastsensorik sowie die Frage, ob Ganzkörperkoordination mit den bisherigen Trainingsschemata ausreichend erfasst wird. Seminarisch geeignet ist das Thema, weil es aktuelle KI-Entwicklungen mit klassischer Robotik verbindet und sich klar auf den technischen Kern humanoider Manipulation eingrenzen lässt, ohne in allgemeine LLM-Diskussionen, reine Benchmark-Sammlungen oder Produktvorstellungen abzugleiten. Dadurch eignet es sich gut für einen strukturierenden Vergleich zwischen Forschungsprototypen, offenen Datensätzen und ersten industriellen Systemdemonstratoren.}
+
+\TopicLeitfragen{%
+\item Wie koppeln VLA-Modelle Sprachverständnis, visuelle Wahrnehmung und kontinuierliche Aktionsausgabe?
+\item Welche Aktionsrepräsentationen skalieren von Arm-Manipulation zu humanoider Ganzkörpermanipulation?
+\item Welche Datensätze und Evaluationsmetriken sind für Generalisierung in humanoider Manipulation aussagekräftig?
+\item Wo liegen Sicherheits- und Latenzgrenzen beim realen Einsatz?
+}
+
+\TopicScope{%
+\item Keine allgemeine Einführung in Large Language Models ohne Robotikbezug
+\item Kein Schwerpunkt auf rein mobilen Navigationsaufgaben ohne Manipulation
+\item Keine detaillierte Herleitung klassischer Regelungs- und Greifplanung
+\item Keine Produktbewertung einzelner humanoider Roboter
+}
+
+\TopicPractice{Erstelle eine Vergleichsmatrix für RT-2, VLAS und Helix mit Fokus auf Eingabemodalitäten, Aktionsrepräsentation, Datenbasis und Evaluationsszenarien. Optional kann dazu eine kleine Literaturauswertung mit Architekturdiagrammen und Benchmarktabellen ergänzt werden.}
+
+\TopicKeywords{VLA, humanoide Robotik, Manipulation, multimodale Modelle, Robot Learning, Generalisierung, Teleoperation, Datensätze}
+
+\nocite{robotik_vla_hum_rt2_2023,robotik_vla_hum_openx_2023,robotik_vla_hum_vlas_2025,robotik_vla_hum_helix_2025,robotik_vla_hum_survey_2025}
+\end{topic}

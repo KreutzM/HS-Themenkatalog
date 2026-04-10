@@ -20,7 +20,7 @@ Constraints:
 - keep the committed default on student view unless explicitly asked otherwise
 
 Verification:
-- run the documented build command: `latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex`
+- run the documented build command: `latexmk -lualatex -outdir=build -interaction=nonstopmode -halt-on-error main.tex`
 - report changed files and verification result
 ```
 

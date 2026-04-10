@@ -1,0 +1,31 @@
+\begin{topic}[id=humanoid_ros2_safety,
+             difficulty={Mittel},
+             type={Systemanalyse mit Architektur-, Risiko- und Maßnahmenvergleich},
+             prerequisites={Grundlagen zu ROS~2, Rechnernetzen, verteilten Systemen und mobiler Robotik},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-10},
+             tags={ Humanoide Robotik, ROS~2, SROS~2, Safety, Security, Threat Modeling, Zugriffskontrolle, DDS-Security }]{Sicherheit humanoider Roboter: Safety, Security und ROS~2}
+
+\TopicDescription{Humanoide Roboter vereinen leistungsfähige Aktorik, dichte Sensorik, vernetzte Software und enge Mensch-Roboter-Interaktion. Dadurch treffen zwei Sicherheitsbegriffe aufeinander, die im Seminar klar getrennt und anschließend zusammengeführt werden müssen: \emph{Safety} als Schutz vor unbeabsichtigten Gefährdungen durch Fehlfunktionen, Regelungsfehler oder unsichere Bewegungen, und \emph{Security} als Schutz vor absichtlichen Angriffen auf Kommunikation, Software, Identitäten und Update-Pfade. Das Thema untersucht, wie sich diese Perspektiven in humanoiden ROS~2-basierten Systemen gegenseitig beeinflussen. Im Mittelpunkt stehen typische Angriffsflächen in ROS~2-Architekturen, insbesondere Discovery, Kommunikationsbeziehungen, Zugriffskontrolle, Zertifikate und Security Enclaves, sowie deren Bedeutung für reale Betriebsrisiken humanoider Plattformen. Ergänzend wird betrachtet, welche Rolle sicherheitsbezogene Normen für Service- und Assistenzrobotik bei physischer Menschennähe spielen und wo ihre Reichweite gegenüber Cyberangriffen endet. Ziel ist keine vollständige Normen- oder Penetrationstestübersicht, sondern eine strukturierte Einordnung von Bedrohungen, Schutzmechanismen und Zielkonflikten. Daraus lässt sich bewerten, welche Maßnahmen in ROS~2-basierter Softwarearchitektur technisch realistisch sind und wie Safety- und Security-Anforderungen gemeinsam in ein belastbares Systemdesign überführt werden können.}
+
+\TopicLeitfragen{%
+\item Wie unterscheiden sich Safety und Security bei humanoiden Robotern technisch und organisatorisch?
+\item Welche ROS~2-Komponenten erzeugen die wichtigsten Angriffsflächen?
+\item Welche Schutzmechanismen bietet SROS~2 praktisch für Kommunikation und Zugriffskontrolle?
+\item Wo entstehen Zielkonflikte zwischen Benutzbarkeit, Echtzeitverhalten und Sicherheitsmaßnahmen?
+}
+
+\TopicScope{%
+\item Keine vollständige Einführung in Humanoid-Mechanik oder Regelungstechnik
+\item Kein allgemeiner Überblick über Robotiknormen außerhalb serviceorientierter Mensch-Roboter-Anwendungen
+\item Keine detaillierte Kryptographieanalyse auf Protokollebene
+\item Kein praktischer Red-Team-Angriff auf reale Hardware als Pflichtbestandteil
+}
+
+\TopicPractice{In einer kleinen Demo kann eine einfache ROS~2-Kommunikation mit und ohne SROS~2 verglichen werden, etwa hinsichtlich Rollen, Zertifikaten und erlaubten Topic-Zugriffen. Alternativ kann ein Bedrohungsmodell für einen ausgewählten humanoiden Assistenzfall erstellt und mit ROS~2-Schutzmechanismen abgeglichen werden.}
+
+\TopicKeywords{Humanoide Robotik, ROS~2, SROS~2, Safety, Security, Threat Modeling, Zugriffskontrolle, DDS-Security}
+
+\nocite{robotics_humanoid_ros2threat_2019,robotics_humanoid_ros2security_2026,robotics_humanoid_iso13482_2025,robotics_humanoid_sros2_2022}
+\end{topic}

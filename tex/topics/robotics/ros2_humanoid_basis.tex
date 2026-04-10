@@ -1,0 +1,29 @@
+\begin{topic}[id=ros2_humanoid_basis,
+             difficulty={Mittel},
+             type={Architektur- und Systemanalyse},
+             prerequisites={Grundlagen in Robotik, Linux, Python oder C++, Grundbegriffe verteilter Systeme},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-10},
+             tags={ ROS~2, ros2\_control, humanoide Robotik, Middleware, Hardware-Abstraktion, Controller Manager, Echtzeit, Systemarchitektur }]{ROS~2 und ros2\_control als Softwarebasis für humanoide Roboter}
+
+\TopicDescription{Das Thema untersucht ROS~2 zusammen mit ros2\_control als Softwarebasis für humanoide Roboter. Im Mittelpunkt steht nicht die Implementierung einzelner Bewegungen, sondern die Architektur, mit der sich Wahrnehmung, Hardwarezugriff und Regelung in einem modularen System koppeln lassen. ROS~2 stellt dafür das Kommunikationsmodell aus Knoten, Topics, Services und Actions bereit, während ros2\_control die hardwarenahe Schicht für Aktuatoren, Sensoren und Controller organisiert. Für humanoide Plattformen ist diese Trennung besonders relevant, weil viele Freiheitsgrade, mehrere Sensortypen und unterschiedliche Echtzeitanforderungen koordiniert werden müssen. Seminarisch interessant ist das Thema, weil sich daran typische Technikfragen gut analysieren lassen: Welche Aufgaben übernimmt der Controller Manager? Wie werden Gelenke, Sensoren und GPIO-artige Schnittstellen als Hardware-Komponenten modelliert? Wo liegen die Vorteile standardisierter Schnittstellen, und wo stoßen generische Frameworks bei komplexen Ganzkörpersystemen an Grenzen? Der Vortrag kann außerdem einordnen, warum ROS~2 gegenüber ROS~1 für verteilte, robuste und besser integrierbare Robotiksysteme attraktiver ist, ohne daraus ein reines Migrationsthema zu machen. Dadurch entsteht ein klar abgegrenztes Überblicks- und Systemthema mit guter Quellenlage und direktem Bezug zu späteren Seminarthemen wie Wahrnehmung, Simulation, Manipulation oder Sicherheit humanoider Roboter.}
+
+\TopicLeitfragen{%
+\item Welche Rolle übernimmt ROS~2 in der Modularisierung humanoider Robotersoftware?
+\item Wie strukturiert ros2\_control den Zugriff auf Gelenke, Sensoren und Controller?
+\item Welche Echtzeit- und Determinismusfragen entstehen beim Einsatz auf humanoiden Plattformen?
+}
+
+\TopicScope{%
+\item Keine Implementierung vollständiger Lauf- oder Manipulationsalgorithmen
+\item Kein Vergleich konkreter humanoider Hardwareplattformen
+\item Keine vertiefte Behandlung von Motion Planning oder Reinforcement Learning
+}
+
+\TopicPractice{Eine kleine Demo kann die Architektur an einem Simulations- oder Beispielrobotersystem nachvollziehen: Nodes, Controller Manager, Hardware-Interfaces und einen einfachen Controllerstart. Alternativ kann eine bestehende ros2\_control-Demo strukturell analysiert und auf humanoide Anforderungen übertragen werden.}
+
+\TopicKeywords{ROS~2, ros2\_control, humanoide Robotik, Middleware, Hardware-Abstraktion, Controller Manager, Echtzeit, Systemarchitektur}
+
+\nocite{robotics_ros2control_core_2026,robotics_ros2control_cm_2026,robotics_ros2control_hwtypes_2026,robotics_ros2_basic_2026,robotics_ros2_adoption_springer2024}
+\end{topic}

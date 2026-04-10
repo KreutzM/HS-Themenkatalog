@@ -59,7 +59,7 @@ it is auto-loaded. For the observed Codex CLI 0.118.0 behavior, active config is
 `~/.codex/config.toml`, with command-line overrides such as `-m`, `-s`, `-a`, and `-c`.
 
 If no better project-specific command is documented, use:
-- `latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex`
+- `latexmk -lualatex -outdir=build -interaction=nonstopmode -halt-on-error main.tex`
 - `git diff --stat`
 - `git status --short`
 

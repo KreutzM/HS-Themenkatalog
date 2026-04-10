@@ -1,4 +1,5 @@
 # LaTeX build artifacts
+build/
 *.aux
 *.bbl
 *.bcf
@@ -33,8 +34,8 @@
 _minted*
 *.pyg
 
-# Generated PDFs if you do not want them versioned
-# main.pdf
+# Generated PDFs
+main.pdf
 
 # OS / editor files
 .DS_Store
