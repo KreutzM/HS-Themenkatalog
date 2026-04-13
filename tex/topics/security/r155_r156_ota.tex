@@ -1,0 +1,31 @@
+\begin{topic}[id=r155_r156_ota,
+             difficulty={Anspruchsvoll},
+             type={Regelungsanalyse + technische Nachweisführung},
+             prerequisites={Grundlagen IT-Sicherheit, eingebettete Systeme, Grundlagen Fahrzeugvernetzung},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-13},
+             tags={ UNECE R155, UNECE R156, OTA-Updates, CSMS, SUMS, ISO 24089, ISO/SAE 21434, Uptane, Nachweisführung }]{UNECE R155/R156 und technische Nachweisführung für sichere OTA-Updates im Fahrzeug}
+
+\TopicDescription{Das Thema untersucht, wie Fahrzeughersteller sichere Over-the-Air-Updates unter den Vorgaben von UNECE R155 und R156 technisch und organisatorisch nachweisbar machen. Im Mittelpunkt stehen die Verzahnung von Cyber Security Management System (CSMS) und Software Update Management System (SUMS), die Absicherung des Update-Prozesses vom Backend bis zum Steuergerät sowie die Frage, welche Artefakte für Typgenehmigung, Audit und Betriebsphase belastbar sind. Seminarisch sinnvoll ist der Fokus auf Nachweisführung entlang des Fahrzeug-Lifecycles: Bedrohungsanalyse, Rollen und Verantwortlichkeiten in der Lieferkette, kryptografische Absicherung, Versions- und Konfigurationsmanagement, sichere Freigabe, Rückfallstrategien, Monitoring von Vorfällen und Dokumentation nach einem Update sowie Rückverfolgbarkeit von Softwareständen im Feld. Das Thema erlaubt, regulatorische Anforderungen mit technischen Referenzen wie ISO/SAE 21434, ISO 24089 und Uptane zu verbinden, ohne in eine reine Rechts- oder Produktbetrachtung abzugleiten. Ziel ist nicht die vollständige Auslegung aller Normtexte, sondern eine systematische Analyse, welche technischen Kontrollen und Evidenzen erforderlich sind, damit OTA-Updates über die gesamte Nutzungsdauer eines Fahrzeugs sicher geplant, verteilt, installiert und gegenüber Behörden nachvollziehbar belegt werden können. Dadurch entsteht ein klar eingegrenztes Seminarthema mit hoher Praxisnähe, aber ohne verpflichtenden Hardware-Aufbau.}
+
+\TopicLeitfragen{%
+\item Welche technischen Artefakte belegen CSMS und SUMS entlang des OTA-Lifecycles?
+\item Wie ergänzen sich UNECE R155/R156, ISO/SAE 21434 und ISO 24089?
+\item Welche Sicherheitsmechanismen sind für sichere Verteilung, Installation und Rollback zentral?
+\item Wie lässt sich Nachweisführung gegenüber Typgenehmigung und Betrieb strukturiert aufbauen?
+}
+
+\TopicScope{%
+\item Keine juristische Detailauslegung nationaler Homologationsverfahren.
+\item Kein vollständiger Vergleich kommerzieller OTA-Plattformen oder Herstellerprodukte.
+\item Keine tiefgehende Implementierung einzelner Kryptobibliotheken oder Penetrationstests.
+\item Safety-Aspekte nur, soweit sie für Security-Nachweise und Update-Freigaben relevant sind.
+}
+
+\TopicPractice{Möglich ist eine Artefakt-Matrix, die Anforderungen aus R155/R156 beispielhaft auf Update-Paket, Signaturkette, Freigabeprozess, Rollback und Logging abbildet. Alternativ kann ein vereinfachter OTA-Ablauf mit Uptane-Rollen und zugehörigen Nachweisobjekten modelliert werden.}
+
+\TopicKeywords{UNECE R155, UNECE R156, OTA-Updates, CSMS, SUMS, ISO 24089, ISO/SAE 21434, Uptane, Nachweisführung}
+
+\nocite{auto_r155_unece2021,auto_r156_unece2021,auto_iso24089_iso2023,auto_iso21434_iso2021,auto_uptane_std_uptane2023}
+\end{topic}
