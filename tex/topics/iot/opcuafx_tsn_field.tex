@@ -5,27 +5,27 @@
              practice={optional},
              owner={Dozententeam},
              updated={2026-04-13},
-             tags={ OPC UA FX, TSN, Feldebene, deterministisches Ethernet, Controller-to-Controller, Controller-to-Device, Offline Engineering, Interoperabilitaet }]{OPC UA FX \& TSN fuer die Feldebene}
+             tags={ OPC UA FX, TSN, Feldebene, deterministisches Ethernet, Controller-to-Controller, Controller-to-Device, Offline Engineering, Interoperabilität }]{OPC UA FX \& TSN für die Feldebene}
 
-\TopicDescription{OPC UA FX und TSN adressieren die Feldebene als interoperable, Ethernet-basierte Kommunikationsarchitektur fuer echtzeitnahe industrielle Systeme. Fuer ein seminarfaehiges Thema sollte der Fokus nicht auf einer allgemeinen Industrie-4.0-Einordnung liegen, sondern auf der technischen Frage, wie Controller-to-Controller- und perspektivisch Controller-to-Device-Kommunikation mit deterministischen Netzwerkeigenschaften, standardisierten Informationsmodellen und beherrschbarem Engineering zusammengefuehrt werden. Im Zentrum stehen deshalb die UAFX-Bausteine fuer AutomationComponent, ConnectionManager, PubSub, Profile und Offline-Engineering sowie die Rolle von TSN fuer Zeitsynchronisation, priorisierte Verkehrsstr\"ome, planbare Latenzen und robuste Netzwerkkonfiguration. Analysiert wird, wie Interoperabilitaet zwischen Steuerungen und Feldgeraeten nicht nur ueber Telegramme, sondern ueber ein gemeinsames Modell fuer Verbindungen, Datenfluesse und Geraeteeigenschaften entsteht. Ebenso relevant ist der Engineering-Prozess: Wer erzeugt Verbindungsbeschreibungen, wie werden Konfigurationen deployt, welche Freiheitsgrade bleiben dem Integrator, und wo entstehen Herstellerabhaengigkeiten trotz Standardisierung. Dabei ist auch zu klaeren, welche Teile heute bereits praktisch abgesichert und zertifizierbar sind. Ein systematischer Vergleich mit klassischen Industrial-Ethernet-Ansaetzen ist nicht Hauptziel, kann aber helfen, den Mehrwert und die Komplexitaet von OPC UA FX ueber TSN in der Feldebene einzuordnen. Das Thema eignet sich damit fuer eine Architektur- und Engineeringanalyse zwischen Offenheit, Determinismus, Zertifizierbarkeit und Integrationsaufwand.}
+\TopicDescription{OPC UA FX und TSN adressieren die Feldebene als interoperable, Ethernet-basierte Kommunikationsarchitektur für echtzeitnahe industrielle Systeme. Für ein seminarfähiges Thema sollte der Fokus nicht auf einer allgemeinen Industrie-4.0-Einordnung liegen, sondern auf der technischen Frage, wie Controller-to-Controller- und perspektivisch Controller-to-Device-Kommunikation mit deterministischen Netzwerkeigenschaften, standardisierten Informationsmodellen und beherrschbarem Engineering zusammengeführt werden. Im Zentrum stehen deshalb die UAFX-Bausteine für AutomationComponent, ConnectionManager, PubSub, Profile und Offline-Engineering sowie die Rolle von TSN für Zeitsynchronisation, priorisierte Verkehrsströme, planbare Latenzen und robuste Netzwerkkonfiguration. Analysiert wird, wie Interoperabilität zwischen Steuerungen und Feldgeräten nicht nur über Telegramme, sondern über ein gemeinsames Modell für Verbindungen, Datenflüsse und Geräteeigenschaften entsteht. Ebenso relevant ist der Engineering-Prozess: Wer erzeugt Verbindungsbeschreibungen, wie werden Konfigurationen ausgerollt, welche Freiheitsgrade bleiben dem Integrator, und wo entstehen Herstellerabhängigkeiten trotz Standardisierung? Dabei ist auch zu klären, welche Teile heute bereits praktisch abgesichert und zertifizierbar sind. Ein systematischer Vergleich mit klassischen Industrial-Ethernet-Ansätzen ist nicht Hauptziel, kann aber helfen, den Mehrwert und die Komplexität von OPC UA FX über TSN in der Feldebene einzuordnen. Das Thema eignet sich damit für eine Architektur- und Engineeringanalyse zwischen Offenheit, Determinismus, Zertifizierbarkeit und Integrationsaufwand.}
 
 \TopicLeitfragen{%
-\item Welche UAFX-Mechanismen tragen interoperable Controller-to-Controller-Kommunikation mit deterministischen Anforderungen auf Ethernet-Basis?
+\item Welche UAFX-Mechanismen ermöglichen interoperable C2C-Kommunikation mit deterministischen Anforderungen auf Ethernet-Basis?
 \item Wie wirken AutomationComponent, ConnectionManager, PubSub und TSN im Engineering und Laufzeitbetrieb zusammen?
 \item Welche Unterschiede bestehen zwischen heutiger C2C-Reife und der Erweiterung in Richtung Controller-to-Device?
-\item Wo liegen technische Zielkonflikte zwischen Offenheit, Zertifizierbarkeit, Konfigurationsaufwand und echtzeitnaher Performance?
+\item Wo liegen technische Zielkonflikte zwischen Offenheit, Zertifizierbarkeit, Konfigurationsaufwand und echtzeitnaher Leistungsfähigkeit?
 }
 
 \TopicScope{%
-\item Keine vollstaendige Gegenueberstellung aller Industrial-Ethernet-Familien wie PROFINET, EtherCAT oder Sercos.
+\item Keine vollständige Gegenüberstellung aller Industrial-Ethernet-Familien wie PROFINET, EtherCAT oder Sercos.
 \item Keine detaillierte Implementierung einzelner TSN-Scheduler oder Switch-Chips.
 \item Kein Fokus auf Safety-Protokolle und funktionale Sicherheit im Detail.
-\item Keine Produktbewertung konkreter Herstellerloesungen oder Engineering-Tools.
+\item Keine Produktbewertung konkreter Herstellerlösungen oder Engineering-Tools.
 }
 
-\TopicPractice{Anhand eines vereinfachten Anlagenbeispiels mit zwei Steuerungen und einem geplanten Feldgeraeteanschluss kann der Engineering-Workflow mit ConnectionConfigurationSet, ConnectionManager und TSN-Randbedingungen modelliert werden. Dafuer reichen Architekturdiagramme, Rollenmodelle und ein exemplarischer Verbindungsentwurf ohne Hardware-Aufbau.}
+\TopicPractice{Anhand eines vereinfachten Anlagenbeispiels mit zwei Steuerungen und einem geplanten Feldgeräteanschluss kann der Engineering-Workflow mit ConnectionConfigurationSet, ConnectionManager und TSN-Randbedingungen modelliert werden. Dafür reichen Architekturdiagramme, Rollenmodelle und ein exemplarischer Verbindungsentwurf ohne Hardware-Aufbau.}
 
-\TopicKeywords{OPC UA FX, TSN, Feldebene, deterministisches Ethernet, Controller-to-Controller, Controller-to-Device, Offline Engineering, Interoperabilitaet}
+\TopicKeywords{OPC UA FX, TSN, Feldebene, deterministisches Ethernet, Controller-to-Controller, Controller-to-Device, Offline Engineering, Interoperabilität}
 
 \nocite{iiot_opcuafx_tsn_opcf2022,iiot_opcuafx_tsn_part802025,iiot_opcuafx_tsn_part832025,iiot_opcuafx_tsn_cert2024,iiot_opcuafx_tsn_ieee2026,iiot_opcuafx_tsn_608022026}
 \end{topic}
