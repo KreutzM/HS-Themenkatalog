@@ -1,0 +1,31 @@
+\begin{topic}[id=sdv_zonal_ee_arch,
+             difficulty={Anspruchsvoll},
+             type={Architektur- und Plattformanalyse},
+             prerequisites={Grundlagen zu eingebetteten Systemen, Rechnerarchitektur, Fahrzeugnetzwerken und IT-Sicherheit},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-13},
+             tags={ Software-defined Vehicle, zonale E/E-Architektur, Fahrzeug-Compute, Virtualisierung, OTA-Updates, AUTOSAR Adaptive, Safety, Security }]{Software-defined Vehicle und zonale E/E-Architekturen}
+
+\TopicDescription{Software-defined Vehicle (SDV) bezeichnet eine Fahrzeugarchitektur, in der Funktionen, Updates und Varianten zunehmend ueber Software statt ueber eine grosse Zahl fest verdrahteter Steuergeraete differenziert werden. Fuer ein seminarfaehiges Thema sollte der Fokus daher nicht auf Marketingbegriffen liegen, sondern auf der technischen Abl\"osung klassischer, funktionszentrierter ECU-Landschaften durch zonale E/E-Architekturen mit zentralem Fahrzeug-Compute, Ethernet-Backbone und klarer Trennung zwischen hardware-nahen und adaptiven Softwareebenen. Im Mittelpunkt stehen die Rollen von Zonencontrollern, Hochleistungsrechnern, Virtualisierung und service-orientierter Kommunikation sowie die Frage, wie Classic- und Adaptive-AUTOSAR-Anteile gemeinsam betrieben, isoliert und aktualisiert werden. Ebenso relevant ist der Engineering-Wandel: Deployment auf Maschinen statt nur auf einzelne ECUs, softwaregetriebene Konfiguration, OTA-Updatefaehigkeit und Lebenszyklusmanagement ueber Fahrzeugplattformen hinweg. Damit verbinden sich neue Anforderungen an Safety und Security, etwa sichere Partitionierung, kontrollierte Kommunikation zwischen Zonen, Firewall-Konzepte, Update-Absicherung und Nachweisbarkeit in heterogenen Rechnerplattformen. Auch die Migration ist technisch anspruchsvoll, weil bestehende Funktionen, Bussysteme und Echtzeitanforderungen nicht abrupt verschwinden, sondern in Hybridarchitekturen weitergefuehrt werden muessen. Das Thema eignet sich deshalb fuer eine Architektur- und Trade-off-Analyse zwischen Zentralisierung und Restdezentralitaet, Offenheit und Herstellerbindung, Rechenkonsolidierung und Echtzeitnaehe sowie Wiederverwendbarkeit, Wartbarkeit und Integrationsaufwand im kuenftigen Fahrzeug.}
+
+\TopicLeitfragen{%
+\item Welche technischen Ziele verfolgen zonale E/E-Architekturen gegenueber klassischen funktionszentrierten ECU-Landschaften?
+\item Wie werden zentrale Fahrzeugrechner, Zonencontroller, Virtualisierung und Classic-/Adaptive-AUTOSAR in einer SDV-Plattform zusammengesetzt?
+\item Welche Anforderungen entstehen fuer Updatefaehigkeit, sichere Partitionierung und Lebenszyklusmanagement ueber mehrere Rechnerdomaenen hinweg?
+\item Wo liegen Zielkonflikte zwischen Safety, Security, Echtzeit, Rechenkonsolidierung und Engineering-Komplexitaet?
+}
+
+\TopicScope{%
+\item Keine Marktuebersicht konkreter OEM-, Tier-1- oder Halbleiterstrategien.
+\item Keine detaillierte Analyse einzelner Bussysteme wie CAN, LIN oder Automotive Ethernet im Protokolldetail.
+\item Kein Fokus auf automatisiertes Fahren, Infotainment oder Cloud-Dienste als eigenstaendige Themen.
+\item Keine vollstaendige Normenuebersicht zu Homologation, Cybersecurity oder funktionaler Sicherheit.
+}
+
+\TopicPractice{Anhand einer vereinfachten Fahrzeugarchitektur mit zwei Zonencontrollern, zentralem Rechner und verbliebenen Bestands-ECUs kann ein Migrationspfad vom klassischen Steuergeraeteverbund zur zonalen Plattform modelliert werden. Dazu reichen Funktionszuordnung, Kommunikationspfade, Virtualisierungsgrenzen und ein OTA-Update-Szenario ohne Hardware-Aufbau.}
+
+\TopicKeywords{Software-defined Vehicle, zonale E/E-Architektur, Fahrzeug-Compute, Virtualisierung, OTA-Updates, AUTOSAR Adaptive, Safety, Security}
+
+\nocite{veh_sdvzonal_autosar2025,veh_sdvzonal_aparch2023,veh_sdvzonal_apmeth2024,veh_sdvzonal_fw2024,veh_sdvzonal_unr1562021,veh_sdvzonal_sdvall2024}
+\end{topic}
