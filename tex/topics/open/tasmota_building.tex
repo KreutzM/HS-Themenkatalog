@@ -1,24 +1,24 @@
 \begin{topic}[id=tasmota_building,
              difficulty={Mittel},
              type={Systemanalyse + Praxisbezug},
-             prerequisites={Grundlagen IoT und Gebäudeautomation; Interesse an Open-Source-Werkzeugen},
+             prerequisites={Grundlagen IoT und Gebäudeautomation; Basiswissen IP-Netze hilfreich},
              practice={gut möglich},
              owner={Dozententeam},
-             updated={2026-04-09},
-             tags={ Tasmota, Smart Home, MQTT, Home Assistant, Sicherheit }]{Tasmota in der Gebäudeautomation}
+             updated={2026-04-13},
+             tags={ Matter, Thread, Gebäudeautomation, Interoperabilität, Provisioning, Security, Home Assistant }]{Matter und Thread in der Gebäudeautomation}
 
-\TopicDescription{Tasmota ermöglicht flexible Steuerung/Integration vieler Smart-Home-Geräte (meist über MQTT). Wir betrachten Nutzen und Risiken (Sicherheit, Updatepfade), Interoperabilität (Home Assistant) und typische Use-Cases. Ziel ist ein pragmatischer Überblick mit Fokus auf sichere Konfiguration und Wartbarkeit.}
+\TopicDescription{Für die Gebäudeautomation wird 2026 weniger interessant, wie einzelne Open-Source-Firmwares konfiguriert werden, sondern wie interoperable, lokale und zukunftsfeste Integrationspfade aussehen. Das Thema fokussiert daher Matter als Anwendungsstandard und Thread als IP-basiertes Mesh-Netz für vernetzte Geräte. Betrachtet werden Provisioning und Commissioning, Fabric- und Border-Router-Konzepte, lokale Steuerung ohne Cloud-Zwang, Security-Grundlagen sowie die praktische Einordnung gegenüber bestehenden MQTT-, Home-Assistant- und Bestandssystemen. Tasmota darf höchstens als Brownfield- oder Open-Source-Kontext vorkommen; der Kern ist die technische Bewertung von Interoperabilität, Betriebsmodell und Integrationsgrenzen.}
 
-\TopicLeitfragen{\item Welche Sicherheits- und Update-Pfade sind sinnvoll?
-\item Wie integriere ich Tasmota stabil (MQTT/HA)?
-\item Wo liegen Grenzen/Vendor-Fallen?
+\TopicLeitfragen{\item Welche Probleme lösen Matter und Thread gegenüber klassischen Smart-Home-Insellösungen wirklich?
+\item Wie wirken sich Commissioning, lokale IP-Integration und Security-Mechanismen auf Betrieb und Wartbarkeit aus?
+\item Wie integriert man Matter/Thread sinnvoll in bestehende MQTT- oder Home-Assistant-Landschaften, ohne neue Komplexität zu verstecken?
 }
 \TopicScope{\item Kein Reverse-Engineering proprietärer Geräte.
 \item Keine Elektroinstallation.
 }
-\TopicPractice{Optionale Praxisidee: Kleiner MQTT-Flow mit Zustands- und Update-Konzept.}
+\TopicPractice{Optionale Praxisidee: Architekturvergleich für ein kleines Raum-Szenario mit Matter/Thread und einer Bestandsintegration über Home Assistant oder Bridge-Konzept.}
 
-\TopicKeywords{Tasmota, Smart Home, MQTT, Home Assistant, Sicherheit}
+\TopicKeywords{Matter, Thread, Gebäudeautomation, Interoperabilität, Provisioning, Security, Home Assistant}
 
-\nocite{tasmotaDocs,homeAssistant}
+\nocite{matterGoogleHome,openThreadPrimer,homeAssistant}
 \end{topic}

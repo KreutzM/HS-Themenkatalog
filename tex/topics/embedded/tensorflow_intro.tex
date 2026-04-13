@@ -1,24 +1,24 @@
 \begin{topic}[id=tensorflow_intro,
-             difficulty={Einstieg},
-             type={Überblick + Einordnung},
-             prerequisites={Grundlagen Python; Basisverständnis maschinelles Lernen},
+             difficulty={Mittel},
+             type={Systemanalyse + Validierung},
+             prerequisites={Grundlagen Python; Basisverständnis maschinelles Lernen und Modellinferenz},
              practice={optional},
              owner={Dozententeam},
-             updated={2026-04-09},
-             tags={ TensorFlow, Keras, Training, Inferenz, Export, TFLite, ONNX, Monitoring }]{TensorFlow – praxisorientierte Einführung}
+             updated={2026-04-13},
+             tags={ LiteRT, TensorFlow Lite, Edge AI, Konvertierung, Quantisierung, Operatoren, Validierung }]{LiteRT auf Edge-Geräten: Konvertierung, Quantisierung und Validierung}
 
-\TopicDescription{TensorFlow erlaubt schnellen, reproduzierbaren ML-Einstieg und bietet mit Keras einen klaren Pfad von der Daten-Pipeline zum lauffähigen Modell. Wir fokussieren auf das, was in kleinen Projekten zählt: saubere Splits, Baselines, sinnvolle Metriken (z.~B. Confusion-Matrix) und typische Stolpersteine wie Leakage oder unausgewogene Daten. Anschließend geht es um Exportpfade (SavedModel, TFLite, ONNX) und die Frage, wie man nach der Konvertierung die funktionale Gleichwertigkeit prüft. Ergebnis: Du kannst kleine Aufgaben strukturiert angehen, Ergebnisse fair bewerten und dokumentieren sowie beurteilen, ob ein Modell „gut genug“ für technische Anwendungen ist.}
+\TopicDescription{Dieses Thema betrachtet nicht TensorFlow als allgemeines ML-Framework, sondern den Weg von einem Modell zur robusten Edge-Inferenz mit TensorFlow Lite beziehungsweise LiteRT. Im Fokus stehen Modellkonvertierung aus Keras/SavedModel, Operator-Kompatibilität, Quantisierung, Delegate-/Beschleunigerpfade und die systematische Validierung nach der Konvertierung. Seminarrelevant wird das Thema durch die technische Leitfrage, welche Modellklassen und Operatoren sich auf Edge-Plattformen wirklich eignen, wo Konvertierungsprobleme auftreten und wie man funktionale Gleichwertigkeit, Latenz und Ressourcenbedarf sauber bewertet. Dadurch entsteht ein klar abgegrenztes Vergleichs- und Einordnungsthema statt eines breiten Framework-Tutorials.}
 
-\TopicLeitfragen{\item Wie gestaltet man Baselines, um echte Fortschritte nachzuweisen?
-\item Welche Modelle/Operatoren sind für TFLite gut geeignet?
-\item Wie prüft man funktionale Gleichwertigkeit nach der Konvertierung?
+\TopicLeitfragen{\item Welche Modelltypen und Operatoren lassen sich für LiteRT robust konvertieren und wo liegen typische Grenzen?
+\item Wie verändern Quantisierung und Hardware-Beschleunigung Latenz, Speicherbedarf und Modellgüte?
+\item Wie prüft man nach der Konvertierung systematisch auf funktionale Gleichwertigkeit und numerische Abweichungen?
 }
-\TopicScope{\item Kein Fokus auf große Datensätze/Training auf Clustern.
-\item Kein detaillierter Vergleich aller ML-Frameworks.
+\TopicScope{\item Kein allgemeiner Einstieg in TensorFlow/Keras.
+\item Kein Vollvergleich aller Edge-AI-Frameworks.
 }
-\TopicPractice{Kleines Bild- oder Sensordaten-Beispiel mit Export nach TFLite/ONNX und Kurz-Vergleich der Vorhersagen.}
+\TopicPractice{Ein kleines Modell nach LiteRT konvertieren, eine Float- und eine quantisierte Variante vergleichen und die Unterschiede bei Operator-Unterstützung, Laufzeit und Vorhersagen knapp dokumentieren.}
 
-\TopicKeywords{TensorFlow, Keras, Training, Inferenz, Export, TFLite, ONNX, Monitoring}
+\TopicKeywords{LiteRT, TensorFlow Lite, Edge AI, Konvertierung, Quantisierung, Operatoren, Validierung}
 
-\nocite{tfGetStarted,tfApi}
+\nocite{liteRtOverview,tfApi}
 \end{topic}

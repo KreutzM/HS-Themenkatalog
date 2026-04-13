@@ -1,24 +1,24 @@
 \begin{topic}[id=pytorch_embedded,
-             difficulty={Einstieg},
-             type={Überblick + Einordnung},
-             prerequisites={Grundlagen Python; Basisverständnis maschinelles Lernen},
+             difficulty={Mittel},
+             type={Systemanalyse + Vergleich},
+             prerequisites={Grundlagen Python; Basisverständnis maschinelles Lernen und Inferenz},
              practice={optional},
              owner={Dozententeam},
-             updated={2026-04-09},
-             tags={ PyTorch, Datasets, Training, TorchScript, ExecuTorch, ONNX, Quantisierung }]{PyTorch – kompakte Einführung mit Embedded-Bezug}
+             updated={2026-04-13},
+             tags={ PyTorch, Edge AI, Export, ExecuTorch, ONNX, ONNX Runtime, Quantisierung, Latenz }]{PyTorch auf Edge-Geräten: Exportpfade und Inferenz-Trade-offs}
 
-\TopicDescription{PyTorch eignet sich hervorragend zum schnellen Prototyping. Du lernst Datasets/Dataloaders, `nn.Module`, Logging/Checkpointing und reproduzierbares Training. Dann werden Exportpfade (TorchScript/ONNX) und einfache Optimierungen betrachtet. Der Schwerpunkt liegt auf realistischen Abwägungen: Wie viel Genauigkeit kostet eine Optimierung und was bringt sie an Latenz/Größe? Mit diesem Rüstzeug kannst du Varianten fair vergleichen und geeignete Modelle für Edge-Szenarien vorbereiten.}
+\TopicDescription{PyTorch ist in vielen Projekten der Startpunkt, aber für ein seminarfähiges Thema ist interessanter, wie Modelle anschließend sauber auf Edge-Geräte kommen. Im Mittelpunkt stehen daher Export- und Laufzeitpfade wie `torch.export`/ONNX, ONNX Runtime, ExecuTorch und die Einordnung von TorchScript als Bestandskontext. Analysiert werden typische Zielkonflikte zwischen Portabilität, Operator-Unterstützung, Modellgröße, Speicherbedarf, Latenz und Genauigkeit. Das Thema eignet sich gut als Vergleichs- und Systemanalyse: Nicht „Wie lernt man PyTorch?“, sondern welche Deployment-Pfade für welche Edge-Szenarien technisch sinnvoll sind und wie man die resultierende Inferenz belastbar bewertet.}
 
-\TopicLeitfragen{\item Welche Minimal-Pipelines sind für kleine Projekte am effizientesten?
-\item Wann lohnt sich TorchScript/ONNX/ExecuTorch?
-\item Wie misst und dokumentiert man die Effekte einfacher Optimierungen?
+\TopicLeitfragen{\item Welche Export- und Laufzeitpfade sind für mobile oder eingebettete Edge-Geräte heute realistisch?
+\item Wie wirken sich Operator-Unterstützung, Quantisierung und Laufzeitwahl auf Portabilität, Latenz, Speicherbedarf und Genauigkeit aus?
+\item Wie validiert man, dass exportierte Modelle funktional hinreichend gleichwertig zur Ausgangsversion bleiben?
 }
 \TopicScope{\item Kein tiefes Training großer Modelle.
-\item Kein vollständiger Hardware-Portierungsleitfaden.
+\item Keine vollständige Mobile-App- oder Firmware-Implementierung.
 }
-\TopicPractice{Zwei Modellvarianten exportieren (TorchScript/ONNX) und Inferenzzeiten auf CPU vergleichen.}
+\TopicPractice{Ein kompaktes Modell über zwei Deployment-Pfade exportieren, z.~B. ONNX Runtime und ExecuTorch, und Latenz, Speicherbedarf sowie numerische Abweichungen vergleichend dokumentieren.}
 
-\TopicKeywords{PyTorch, Datasets, Training, TorchScript, ExecuTorch, ONNX, Quantisierung}
+\TopicKeywords{PyTorch, Edge AI, Export, ExecuTorch, ONNX, ONNX Runtime, Quantisierung, Latenz}
 
-\nocite{pytorchTutorials,execuTorchDocs}
+\nocite{pytorchOnnxDocs,onnxRuntimeDocs,execuTorchDocs}
 \end{topic}
