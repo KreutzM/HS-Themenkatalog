@@ -1,24 +1,24 @@
 \begin{topic}[id=memfault_remote_debug,
              difficulty={Mittel},
-             type={Tool- und Prozessanalyse},
+             type={Systemarchitektur + Prozessanalyse},
              prerequisites={Grundlagen eingebetteter Systeme; Basiswissen Debugging und Software-Wartung},
              practice={gut möglich},
              owner={Dozententeam},
-             updated={2026-04-09},
-             tags={ Observability, Crashdump, Core-Dump, Telemetrie, OTA, Datenschutz }]{Remote-Debugging: Memfault}
+             updated={2026-04-13},
+             tags={ Embedded Observability, Crashdump, Telemetrie, Fleet Diagnostics, CI/CD, Datenschutz }]{Embedded Observability und Remote-Debugging im Feld}
 
-\TopicDescription{Feldfehler sind teuer und schwer reproduzierbar. Memfault bietet Embedded-Observability: Geräte liefern Crash/Core-Dumps, Heartbeats und Telemetrie, die in der Cloud ausgewertet werden—inklusive OTA-Funktionen. Das Thema beschreibt Architektur und Integrationsschritte (Build/CI, Symbole/Backtraces) und zeigt, wie Ursachen sichtbar werden (Out-of-Memory, Stack-Überlauf, Watchdog). Ebenso wichtig: Datenschutz—welche Daten sind nötig, wie schützt man sie, wie vermeidet man PII? Ergebnis: Ein klares Verständnis, wann Observability den Unterschied macht.}
+\TopicDescription{Feldfehler in Embedded-Systemen sind teuer, selten reproduzierbar und oft nur mit unzureichenden Logdaten sichtbar. Das Thema betrachtet daher Embedded Observability als Systemaufgabe: Welche minimale Telemetrie, welche Crash-Dumps, welche Versions- und Build-Informationen und welche Fleet-Metriken sind nötig, um Fehler im Feld sauber zu analysieren? Im Mittelpunkt stehen Architektur und Prozesskette von Gerät, Symbol- und Build-Pipeline, Backend, Alerting und Ursachenanalyse. Produktbeispiele wie Memfault dürfen vorkommen, dominieren das Thema aber nicht; wichtiger ist die vendor-neutrale Einordnung von Crash-Analyse, Telemetrie, Datenschutz/PII und CI/CD-Anbindung für reale Flotten.}
 
-\TopicLeitfragen{\item Wie integriert man Symbolik/Backtraces sinnvoll in CI/CD?
-\item Welche Telemetrie ist „mindestens nötig“ vs. „nice to have“?
-\item Wie adressiert man Datenschutz/PII praktisch?
+\TopicLeitfragen{\item Welche minimale Telemetrie liefert im Feld den größten diagnostischen Nutzen?
+\item Wie verbindet man Crash-Dumps, Symbol-Dateien, Release-Versionen und CI/CD zu einer belastbaren Ursachenanalyse?
+\item Wie lassen sich Datenschutz, PII-Vermeidung und technische Diagnoseanforderungen sinnvoll ausbalancieren?
 }
 \TopicScope{\item Kein Vendor-Lock-in-Vergleich im Detail.
-\item Keine vollständige OTA-Implementierung.
+\item Keine vollständige Backend- oder OTA-Implementierung.
 }
-\TopicPractice{Simulation eines Crashes und Interpretation des Backtraces in der Plattform.}
+\TopicPractice{Für ein Beispielsystem ein minimales Observability-Konzept skizzieren: Crash-Erfassung, Telemetrie-Felder, Symbol-Pipeline und Datenschutzregeln für den Feldbetrieb.}
 
-\TopicKeywords{Observability, Crashdump, Core-Dump, Telemetrie, OTA, Datenschutz}
+\TopicKeywords{Embedded Observability, Crashdump, Telemetrie, Fleet Diagnostics, CI/CD, Datenschutz}
 
-\nocite{memfaultDocs,memfaultBlogIntro}
+\nocite{opentelemetryConcepts,memfaultDocs,privacyByDesign}
 \end{topic}
