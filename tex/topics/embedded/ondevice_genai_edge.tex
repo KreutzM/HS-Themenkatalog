@@ -1,0 +1,31 @@
+\begin{topic}[id=ondevice_genai_edge,
+             difficulty={Anspruchsvoll},
+             type={Systemanalyse + Laufzeitvergleich},
+             prerequisites={Grundlagen maschinelles Lernen, mobile oder eingebettete Systeme, Python},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-13},
+             tags={ On-device GenAI, kleine Sprachmodelle, Multimodalmodelle, Quantisierung, Latenz, Speicherbedarf, Datenschutz, ExecuTorch, Gemini Nano, LiteRT-LM }]{On-device Generative AI auf Edge-Geräten: Laufzeit- und Ressourcenanalyse kleiner Sprach- und Multimodalmodelle}
+
+\TopicDescription{Das Thema untersucht, wie kleine Sprach- und Multimodalmodelle direkt auf mobilen und nahen Edge-Geräten ausgeführt werden können, ohne permanente Cloud-Anbindung. Im Mittelpunkt stehen technische Entscheidungen, die die praktische Nutzbarkeit bestimmen: Modellgröße, Quantisierung, Speicherlayout, Hardwarebeschleunigung, Time-to-First-Token, Decode-Rate, Peak-Memory und Datenschutz durch lokale Verarbeitung. Seminarisch sinnvoll ist der Fokus auf Inferenz und Laufzeitpfade statt auf Training großer Foundation-Modelle. Analysiert werden offene und integrierte Ansätze wie ExecuTorch, LiteRT-LM und Gemini Nano sowie geeignete Modellklassen wie kompakte Gemma-3n-Varianten. Daraus ergeben sich gut vergleichbare Trade-offs zwischen Qualität, Latenz, Speicherbedarf und Plattformbindung. Besonders relevant sind 4-Bit- und 8-Bit-Quantisierung, statische oder dynamische Aktivierungsstrategien, bedingtes Laden multimodaler Komponenten und die Frage, welche Teile eines Modells lokal gehalten oder ausgelagert werden. Zusätzlich lässt sich untersuchen, welche Messgrößen einen fairen Vergleich ermöglichen, wie Benchmark-Ergebnisse dokumentiert werden und wo Datenschutzgewinne durch lokale Verarbeitung durch Geräte- und Laufzeitgrenzen relativiert werden. Ziel ist nicht die Bewertung einzelner Produkte, sondern die Herleitung technischer Kriterien, mit denen sich on-device generative KI für Edge-Anwendungen systematisch auswählen, einordnen und hinsichtlich Ressourcenverbrauch, Reaktionszeit, Offline-Fähigkeit und Privatsphäre bewerten lässt.}
+
+\TopicLeitfragen{%
+\item Welche Modell- und Quantisierungsentscheidungen bestimmen Latenz, Speicherbedarf und Antwortqualität auf Edge-Geräten?
+\item Wie unterscheiden sich offene Laufzeitpfade wie ExecuTorch und LiteRT-LM von integrierten Diensten wie Gemini Nano?
+\item Welche Metriken erlauben einen belastbaren Vergleich kleiner Sprach- und Multimodalmodelle im On-device-Betrieb?
+\item Welche Datenschutzvorteile entstehen lokal, und wo setzen Plattform, Speicher und Beschleuniger praktische Grenzen?
+}
+
+\TopicScope{%
+\item Kein Training großer Foundation-Modelle oder verteiltes Pretraining.
+\item Kein vollständiger Marktvergleich von Smartphones, NPUs oder Cloud-APIs.
+\item Keine mathematische Tiefenanalyse einzelner Quantisierungsalgorithmen.
+\item Keine Produktbewertung einzelner Hersteller jenseits technischer Laufzeitkriterien.
+}
+
+\TopicPractice{Möglich ist eine Vergleichsmatrix für zwei Laufzeitpfade, etwa ExecuTorch und LiteRT-LM oder Gemini Nano, anhand dokumentierter Metriken wie Time-to-First-Token, Decode-Rate, Peak-Memory und Offline-Fähigkeit. Alternativ kann ein kleines Referenzszenario für Text- und Bild-Prompts mit unterschiedlichen Quantisierungsstufen konzeptionell ausgewertet werden.}
+
+\TopicKeywords{On-device GenAI, kleine Sprachmodelle, Multimodalmodelle, Quantisierung, Latenz, Speicherbedarf, Datenschutz, ExecuTorch, Gemini Nano, LiteRT-LM}
+
+\nocite{edge_execu_overview_pytorch2026,edge_execu_quant_pytorch2026,edge_gemini_nano_android2026,edge_litertlm_overview_google2026,edge_gemma3n_card_google2025,edge_gemma3n_overview_google2025}
+\end{topic}

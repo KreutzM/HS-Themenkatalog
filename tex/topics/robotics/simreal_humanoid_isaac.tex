@@ -1,0 +1,31 @@
+\begin{topic}[id=simreal_humanoid_isaac,
+             difficulty={Anspruchsvoll},
+             type={Methodenanalyse + Transferbewertung},
+             prerequisites={Grundlagen Robotik, Reinforcement Learning, Python, Sensorik und Kinematik},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-13},
+             tags={ Sim-to-Real, humanoide Robotik, Isaac Lab, Domänenrandomisierung, Kontaktmodellierung, Aktuatorabbildung, Teacher-Student-Distillation, Reinforcement Learning, Failure Modes }]{Sim-to-Real-Transfer für humanoides Robot Learning mit Isaac Lab: Domänenrandomisierung, Aktuatorabbildung und Failure Modes}
+
+\TopicDescription{Das Thema untersucht, wie Lernverfahren für humanoide Roboter aus Isaac-Lab-Simulationen zuverlässig auf reale Hardware übertragen werden können. Im Mittelpunkt steht nicht die allgemeine Leistungsfähigkeit von Humanoiden, sondern die methodische Analyse der Sim-to-Real-Lücke entlang des Trainings- und Deploymentpfads: Domänenrandomisierung für Dynamik, Reibung, Sensorik und Aktuatorparameter, Kontaktmodellierung bei Boden- und Objektinteraktion, Abbildung simulierter Stellgrößen auf reale Antriebs- und Regelstrukturen sowie Auswahl und Qualität von Trainingsdaten. Seminarisch sinnvoll ist der Fokus auf typische Übergangsfehler zwischen Simulation und Hardware, etwa nicht messbare privilegierte Zustände, unzureichend modellierte Kontakte, falsch skalierte PD- oder Torque-Interfaces, Timing- und Latenzabweichungen, Beobachtungsrauschen oder Überanpassung an Simulationsartefakte. Zusätzlich lässt sich untersuchen, wie Workflows mit Teacher-Student-Distillation, Sim-to-Sim-Prüfung, Real-to-Sim-Tuning und reproduzierbaren Seeds den Transfer robuster machen. Ebenso relevant ist die Frage, welche Beobachtungen, Logging-Daten und Abnahmekriterien beim ersten Hardwareeinsatz nötig sind, um Fehler systematisch zu lokalisieren statt nur Erfolg oder Misserfolg zu messen. Das Thema erlaubt, Isaac Lab als konkrete Referenzumgebung mit aktuellen humanoiden Manipulations- und Lokomotionsarbeiten zu verbinden, ohne zu einem bloßen Framework-Überblick zu werden. Ziel ist eine methodische Bewertung, welche Modellierungsentscheidungen, Datenquellen und Diagnosekriterien den realen Transfer verbessern und welche Failure Modes trotz hoher Simulationsperformance bestehen bleiben.}
+
+\TopicLeitfragen{%
+\item Welche Simulationsparameter sollten für humanoides Sim-to-Real in Isaac Lab gezielt randomisiert werden?
+\item Wie beeinflussen Kontaktmodellierung und Aktuatorabbildung die Übertragbarkeit gelernter Policies?
+\item Welche Trainingsdaten und Beobachtungen sind für Distillation, Tuning und Hardwarediagnose entscheidend?
+\item Welche Failure Modes treten trotz hoher Simulationsperformance typischerweise beim ersten Hardwaretransfer auf?
+}
+
+\TopicScope{%
+\item Kein allgemeiner Überblick zu humanoider Robotik oder VLA-Systemen.
+\item Kein vollständiger Vergleich aller Simulatoren, Physik-Engines oder RL-Algorithmen.
+\item Keine Implementierung eines vollständigen Hardware-Deployments als Pflichtbestandteil.
+\item Keine Safety-Zertifizierung oder Produktbewertung konkreter humanoider Plattformen.
+}
+
+\TopicPractice{Möglich ist eine Failure-Mode-Matrix, die Beobachtungsfehler, Kontaktprobleme, Aktuatorabweichungen und Timing-Effekte systematisch den Gegenmaßnahmen im Isaac-Lab-Workflow zuordnet. Alternativ kann ein Transfer-Checklistenentwurf für Teacher, Student, Distillation, Sim-to-Sim-Test und ersten Hardwarelauf erstellt werden.}
+
+\TopicKeywords{Sim-to-Real, humanoide Robotik, Isaac Lab, Domänenrandomisierung, Kontaktmodellierung, Aktuatorabbildung, Teacher-Student-Distillation, Reinforcement Learning, Failure Modes}
+
+\nocite{robot_simreal_isaaclab2026,robot_actuators_isaaclab2026,robot_drand_isaaclab2026,robot_repro_isaaclab2026,robot_dynrand_peng2018,robot_humanoid_lin2025}
+\end{topic}

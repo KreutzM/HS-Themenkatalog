@@ -1,0 +1,31 @@
+\begin{topic}[id=riscv_auto_embedded,
+             difficulty={Anspruchsvoll},
+             type={Architektur- und Ökosystemanalyse},
+             prerequisites={Grundlagen Rechnerarchitektur, eingebettete Systeme, C/C++ und Compilergrundlagen},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-13},
+             tags={ RISC-V, offene ISA, Custom Extensions, Embedded Systems, Automotive, Toolchains, Security, Profiles, Arm-Vergleich }]{RISC-V in Embedded- und Automotive-Systemen: offene ISA, Toolchains, Security und Grenzen gegenüber Arm}
+
+\TopicDescription{Das Thema untersucht, wie sich RISC-V als offene und erweiterbare ISA in Embedded- und Automotive-Systemen technisch einordnen lässt. Im Mittelpunkt stehen drei Ebenen: erstens die ISA selbst mit standardisierten Profilen und der Möglichkeit zu Custom Extensions, zweitens das Software- und Toolchain-Ökosystem mit Compilern, Debug-, Trace- und Build-Unterstützung, drittens Sicherheitsaspekte wie Privilegstufen, Memory Protection, kryptografische Erweiterungen und die Nachweisbarkeit sicherheitsrelevanter Funktionen. Seminarisch sinnvoll ist der Fokus auf Architekturentscheidungen und deren Folgen für reale Produktlinien im Fahrzeug und in Embedded-Geräten: Wo schafft RISC-V Differenzierung durch Anpassbarkeit, Wiederverwendung und geringere Abhängigkeit von einzelnen Anbietern, und wo bleiben Grenzen durch Ecosystem-Maturität, Profilfragmentierung, Zertifizierung, Langzeitpflege und Kompatibilität zu bestehender Arm-basierter Software? Besonders interessant ist der Vergleich zu Arm-basierten Designs im tief eingebetteten Bereich, wo Code-Dichte, Instruktionsabdeckung und vorhandene Werkzeuge oft noch starke Gegenargumente sind. Ziel ist nicht, Marktprognosen zu bewerten oder eine Siegerarchitektur auszurufen, sondern technische Kriterien herzuleiten, mit denen sich RISC-V für MCU-, Domänencontroller- oder zonale Automotive-Plattformen systematisch beurteilen lässt. Dadurch entsteht ein aktuelles Seminarthema mit klarer Eingrenzung zwischen offener ISA-Strategie, Engineering-Praxis und realen Grenzen.}
+
+\TopicLeitfragen{%
+\item Welche Vorteile bieten offene ISA und Custom Extensions in Embedded- und Automotive-SoCs konkret?
+\item Welche Rolle spielen Profile, Toolchains sowie Debug- und Trace-Standards für Portabilität und Wartbarkeit?
+\item Welche Security-Funktionen sind architekturnah standardisiert, und wo beginnt implementierungsspezifische Vertrauenswürdigkeit?
+\item Wo liegen die wichtigsten Grenzen gegenüber Arm-basierten Designs in tief eingebetteten und Automotive-Kontexten?
+}
+
+\TopicScope{%
+\item Keine Unternehmens- oder Lizenzpolitik als Hauptthema.
+\item Keine detaillierte Mikroarchitektur einzelner kommerzieller Kerne.
+\item Keine vollständige Functional-Safety-Zertifizierungsanalyse nach ISO 26262.
+\item Kein Benchmark-Vergleich konkreter SoCs auf realer Hardware.
+}
+
+\TopicPractice{Möglich ist eine Bewertungsmatrix, die Anforderungen aus Embedded- und Automotive-Szenarien auf ISA-Profil, Custom Extensions, Toolchain-Reife und Security-Mechanismen abbildet. Alternativ kann ein strukturierter Vergleich eines kleinen RISC-V- und eines Arm-MCU-Profils anhand dokumentierter Kriterien wie Code-Dichte, Erweiterbarkeit, Debuggierbarkeit und Sicherheitsfunktionen entworfen werden.}
+
+\TopicKeywords{RISC-V, offene ISA, Custom Extensions, Embedded Systems, Automotive, Toolchains, Security, Profiles, Arm-Vergleich}
+
+\nocite{arch_riscv_auto_rvi2026,arch_riscv_profiles_rvi2023,arch_riscv_priv_rvi2026,arch_riscv_crypto_rvi2026,arch_riscv_llvm_llvm2026,arch_riscv_armcmp_tum2024}
+\end{topic}

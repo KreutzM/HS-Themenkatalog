@@ -1,0 +1,31 @@
+\begin{topic}[id=mlperf_tiny_bench,
+             difficulty={Mittel},
+             type={Benchmarkanalyse + Messmethodik},
+             prerequisites={Grundlagen Embedded ML, eingebettete Systeme, C/C++ oder Python},
+             practice={optional},
+             owner={Dozententeam},
+             updated={2026-04-13},
+             tags={ MLPerf Tiny, TinyML-Benchmarking, MCU, Edge AI, Latenz, Energieverbrauch, Speicherbedarf, Quantisierung, EEMBC }]{TinyML-Benchmarking mit MLPerf Tiny: faire Vergleichsmethodik für Latenz, Energie, Speicher und Genauigkeit}
+
+\TopicDescription{Das Thema untersucht, wie MLPerf Tiny als standardisierte Benchmark-Suite für faire Vergleiche von TinyML-Systemen auf Mikrocontrollern und kleinen Beschleunigern genutzt werden kann. Im Mittelpunkt stehen nicht nur Rohwerte, sondern die Messmethodik: Welche Aussagen erlauben Single-Stream-Latenz, Qualitätsziel, optionale Energiemessung und Reproduzierbarkeit tatsächlich, und wo entstehen Verzerrungen durch Toolchains, Quantisierung, Speichergrenzen oder ungetimte Vor- und Nachverarbeitung? Seminarisch sinnvoll ist der Fokus auf Benchmark-Fairness und Vergleichbarkeit zwischen MCUs, DSPs und Tiny-Accelerators. Dazu gehören die Unterscheidung von Closed- und Open-Division, die Rolle fester Referenzmodelle und Qualitätsziele, zulässige Optimierungen sowie die Frage, wie Speicherverbrauch als zusätzliche praktische Kenngröße erfasst werden sollte, obwohl er nicht als primäre offizielle Ergebniszahl von MLPerf Tiny erscheint. Gerade auf kleinen Targets entscheidet Speicher oft darüber, ob eine Implementierung überhaupt lauffähig und damit vergleichbar ist. Das Thema erlaubt außerdem, EEMBC EnergyRunner und die elektrischen Run Rules als Grundlage reproduzierbarer Energiemessungen einzuordnen. Ziel ist nicht die Durchführung eines vollständigen Hardware-Benchmarks, sondern eine systematische Analyse, welche Metriken, Regeln und Zusatzangaben nötig sind, damit Ergebnisse zu Latenz, Energie, Speicherbedarf und Genauigkeit auf ressourcenarmen Plattformen belastbar, fair interpretiert und zwischen unterschiedlichen Ausführungsumgebungen sinnvoll verglichen werden können.}
+
+\TopicLeitfragen{%
+\item Welche Regeln machen MLPerf Tiny auf MCUs und kleinen Beschleunigern zu einem fairen Vergleichsrahmen?
+\item Wie unterscheiden sich Closed- und Open-Division hinsichtlich Vergleichbarkeit, Optimierungsfreiheit und Aussagekraft?
+\item Wie sollten Energie- und Speicherangaben ergänzt werden, damit Benchmark-Ergebnisse praktisch belastbar bleiben?
+\item Welche Messfehler entstehen durch Toolchain, Vorverarbeitung, Quantisierung und unterschiedliche Hardwarepfade?
+}
+
+\TopicScope{%
+\item Keine Optimierung einzelner Kernel oder handgetunter CMSIS-NN-Implementierungen im Detail.
+\item Kein vollständiger Vergleich aller veröffentlichten MLPerf-Tiny-Ergebnisse und Herstellerplattformen.
+\item Keine eigene Laborvalidierung mit Messhardware als Pflichtbestandteil.
+\item Kein Training neuer TinyML-Modelle außerhalb der Benchmark-Regeln.
+}
+
+\TopicPractice{Möglich ist eine Vergleichsmatrix aus veröffentlichten MLPerf-Tiny-Ergebnissen und Systembeschreibungen. Alternativ kann ein Auswertungsschema für Closed/Open-Division, Energie-Setup und Speichernennung entworfen werden.}
+
+\TopicKeywords{MLPerf Tiny, TinyML-Benchmarking, MCU, Edge AI, Latenz, Energieverbrauch, Speicherbedarf, Quantisierung, EEMBC}
+
+\nocite{edge_mlperftiny_overview_mlcommons2026,edge_mlperftiny_rules_mlcommons2024,edge_mlperftiny_benchmark_banbury2021,edge_energyrunner_eembc2026,edge_energyrules_eembc2026}
+\end{topic}
